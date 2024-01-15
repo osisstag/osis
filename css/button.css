@@ -1,0 +1,101 @@
+.mwBtnLeft {text-align:left;}
+.mwBtnRight {text-align: right;}
+.mwBtnCenter {text-align: center;}
+
+#ss-button ul {
+	list-style: none;
+	padding: 0 20px;
+}
+	#ss-button ul li {
+		display: inline-flex;
+		padding: 5px 15px;
+	}
+		#ss-button ul li a, .ss-button /*, a.button */ 
+		{
+			color: #fff !important;
+			text-decoration: none !important;
+			/*font-weight: bold;**/
+		}
+
+.ss-button-wrapper .mwInput.Button {
+    background: #009B61;
+    color: #000;
+    width: 110px;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.ss-button-wrapper .mwInput.Button:hover {
+    background: #808080;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+.ss-button-wrapper .mwInput.Button input.mw {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+.ss-button-wrapper .mwInput:before { padding: 0.2em;}
+.ss-button-wrapper .mwInput:after { padding: 0.2em;}
+
+#ss-button ul li div {
+	float: left;
+	/* padding: 30px; */
+}
+
+	#ss-button ul li div.orange {
+		border-left: none;
+	}
+
+		#ss-button a.button, .ss-button-wrapper a.button.mwButton {
+			background: -webkit-linear-gradient(to top,#0E7E42, #12A657); /*Safari 5.1-6*/
+			background: -o-linear-gradient(to top, #0E7E42, #12A657); /*Opera 11.1-12*/
+			background: -moz-linear-gradient(to top, #0E7E42, #12A657); /*Fx 3.6-15*/
+			background: linear-gradient(to top, #0E7E42, #12A657); /*Standard*/			
+			cursor: pointer;						
+		}
+
+		#ss-button a:hover, .ss-button-wrapper a.button.mwButton:hover {
+			background: -webkit-linear-gradient(to bottom,#0E7E42,#12A657); /*Safari 5.1-6*/
+			background: -o-linear-gradient(to bottom, #0E7E42,#12A657); /*Opera 11.1-12*/
+			background: -moz-linear-gradient(to bottom, #0E7E42,#12A657); /*Fx 3.6-15*/
+			background: linear-gradient(to bottom, #0E7E42,#12A657); /*Standard*/
+		}
+
+#ss-button div.clear {
+	clear: both;
+}
+
+#ss-button a.small, .ss-button-wrapper a.button.mwButton.small {
+	padding: 4px 10px;
+}
+
+#ss-button a.medium, .ss-button-wrapper a.button.mwButton.medium {	
+	padding: 6px 14px;
+}
+
+#ss-button a.large, .ss-button-wrapper a.button.mwButton.large {	
+	padding: 9px 21px !important;
+}
+
+/*colors*/
+#ss-button-table-widget ul#ss-button-color1 {list-style: none;}
+#ss-button-table-widget ul#ss-button-color1 li {display: inline-block; margin: 0 3px;}
+
+#ss-button-table-widget ul#ss-button-color1 li a {
+	width: 30px;
+	height: 30px;
+	display: block;
+	border-radius: 30px;
+	cursor: pointer;	
+}
+
+.ss-button-widget-selected {
+	border: 1px solid #000;
+}

@@ -1,0 +1,85 @@
+/* CTA One  */
+.callToActionWrap.one { background: #000; padding: 40px 0; width: 100%; }
+.callToActionWrap.one .callToAction { max-width: 900px; margin: 0 auto; text-align: center; }
+.callToActionWrap.one .callToAction h1, .callToActionWrap.one .callToAction h2, .callToActionWrap.one .callToAction h3, .callToActionWrap.one .callToAction h4, .callToActionWrap.one .callToAction h5, .callToActionWrap.one .callToAction h6, .callToActionWrap.one .callToAction p { color: #fff; }
+.callToActionWrap.one .callToAction .sidebarRight { margin-top: 17px; }
+
+@media (max-width: 768px) {
+.callToActionWrap.one .callToAction { width: 86%; }
+}
+/* CTA Two  */
+.callToActionWrap.two { background: #333; padding: 40px 0; width: 100%; }
+.callToActionWrap.two .callToAction { max-width: 900px; margin: 0 auto; text-align: center; }
+.callToActionWrap.two .callToAction h1, .callToActionWrap.two .callToAction h2, .callToActionWrap.two .callToAction h3, .callToActionWrap.two .callToAction h4, .callToActionWrap.two .callToAction h5, .callToActionWrap.two .callToAction h6, .callToActionWrap.two .callToAction p { color: #fff; }
+.callToActionWrap.two .callToAction .ctaButton { margin-top: 20px; }
+
+@media (max-width: 768px) {
+.callToActionWrap.two .callToAction { width: 86%; }
+}
+/* CTA Three  */
+.callToActionWrap.three { width: 100%; }
+.callToActionWrap.three .callToAction { margin: 0 auto; background: #444; }
+.callToActionWrap.three .cta:after { clear: both; content: " "; display: block; height: 0; visibility: hidden; }
+.callToActionWrap.three .ctaLeft { float: left; width: 35%; min-height: 250px; padding: 1.5% 3% 1.5% 18%; background: #fff; }
+.callToActionWrap.three .ctaRight { float: right; width: 22%; text-align: center; padding: 2.5% 18% 2% 2%; }
+.callToActionWrap.three .ctaRight h1, .callToActionWrap.three .ctaRight h2, .callToActionWrap.three .ctaRight h3, .callToActionWrap.three .ctaRight h4, .callToActionWrap.three .ctaRight h5, .callToActionWrap.three .ctaRight h6, .callToActionWrap.three .ctaRight p { color: #fff; }
+
+@media (max-width: 1200px) {
+.callToActionWrap.three { }
+.callToActionWrap.three .ctaLeft { padding: 4% 6%; width: 48%; min-height: 300px; }
+.callToActionWrap.three .ctaRight { padding: 6%; width: 28%; }
+}
+
+@media (max-width: 1100px) {
+.callToActionWrap.three { }
+.callToActionWrap.three .ctaLeft { padding: 2% 5%; width: 50%; min-height: 280px; }
+.callToActionWrap.three .ctaRight { padding: 5%; width: 30%; }
+}
+
+@media (max-width: 768px) {
+.callToActionWrap.three .ctaLeft { float: none; width: 90%; padding: 40px 7%; }
+.callToActionWrap.three .ctaRight { float: none; width: 90%; padding: 5%; }
+}
+/* CTA Four  */
+.callToActionWrap.four { width: 100%; background: url(/get/files/image/galleries/blog01.jpg) center center no-repeat; background-size: cover; }
+.callToActionWrap.four .callToActionInner { padding: 180px 0; width: 100%; background: rgba(0,0,0,.6); }
+.callToActionWrap.four .callToAction { max-width: 900px; margin: 0 auto; }
+.callToActionWrap.four .callToAction h1, .callToActionWrap.four .callToAction h2, .callToActionWrap.four .callToAction h3, .callToActionWrap.four .callToAction h4, .callToActionWrap.four .callToAction h5, .callToActionWrap.four .callToAction h6, .callToActionWrap.four .callToAction p { color: #fff; }
+.callToActionWrap.four .button.border p a { background: none; color: #fff; border: 1px solid #fff; }
+.callToActionWrap.four .button.border p a:hover { background: #444; color: #fff; border: 1px solid #444; }
+
+@media (max-width: 900px) {
+.callToActionWrap.four .callToAction { padding: 0 25px; }
+}
+
+@media (max-width: 768px) {
+.callToActionWrap.four .callToAction { width: 80%; }
+.callToActionWrap.four .callToActionInner { padding: 50px 0; }
+}
+/* CTA Five  */
+.callToActionWrap.five { width: 100%; background: url(/get/files/image/galleries/blog01.jpg) center center no-repeat; background-size: cover; width: 100%; }
+.callToActionWrap.five .callToActionInner { padding: 50px 0; min-height: 200px; width: 100%; background: rgba(0,0,0,.6); }
+.callToActionWrap.five .callToAction { max-width: 900px; margin: 0 auto; text-align: center; width: 86%; }
+.callToActionWrap.five .callToAction h1, .callToActionWrap.five .callToAction h2, .callToActionWrap.five .callToAction h3, .callToActionWrap.five .callToAction h4, .callToActionWrap.five .callToAction h5, .callToActionWrap.five .callToAction h6, .callToActionWrap.five .callToAction p { color: #fff; }
+.callToActionWrap.five .callToAction .ctaButton { margin-top: 20px; }
+
+@media (max-width: 768px) {
+.callToActionWrap.five .callToAction { width: 86%; }
+.callToActionWrap.five .callToActionInner { padding: 50px 0; }
+}
+
+/* CTA Six  */
+.callToActionWrap.six { width: 100%; background: url(/get/files/image/galleries/blog01.jpg) center center no-repeat; background-size: cover; width: 100%; }
+.callToActionWrap.six .callToActionInner { padding: 50px 0 0; min-height: 200px; width: 100%; background: rgba(0,0,0,.6); }
+.callToActionWrap.six .callToAction { max-width: 900px; margin: 0 auto; text-align: center; width: 86%; }
+.callToActionWrap.six .callToAction h1, .callToActionWrap.six .callToAction h2, .callToActionWrap.six .callToAction h3, .callToActionWrap.six .callToAction h4, .callToActionWrap.six .callToAction h5, .callToActionWrap.six .callToAction h6, .callToActionWrap.six .callToAction p { color: #fff;}
+.callToActionWrap.six .callToActionForm { background: #eeeeee; padding: 35px; min-height: 450px; max-width: 300px; margin: 0 auto;}
+.callToActionWrap.six .callToActionForm h1, .callToActionWrap.six .callToActionForm h2, .callToActionWrap.six .callToActionForm h3, .callToActionWrap.six .callToActionForm h4, .callToActionWrap.six .callToActionForm h5, .callToActionWrap.six .callToActionForm h6, .callToActionWrap.six .callToActionForm p { color: #333333; }
+.callToActionWrap.six .callToActionForm .Dialog .mwInput {padding:10px;margin: 5px 0;}
+.callToActionWrap.six .callToActionForm .Dialog .mwInput.Select .SubControl { top: 10px;}
+.callToActionWrap.six .callToActionForm .button {text-align: center;margin-top: 20px;}
+.callToActionWrap.six .callToActionForm .button a {background: #333; color: #fff;}
+@media (max-width: 768px) {
+.callToActionWrap.six .callToAction { width: 86%; }
+.callToActionWrap.six .callToActionInner { padding: 50px 0; }
+}

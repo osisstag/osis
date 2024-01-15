@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic,300italic,300");
+
+body {
+	margin			: 0px;
+	padding			: 0px;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-size		: 11px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	padding			: 0px;
+	margin			: 0px;
+}
+
+form, p, tbody, th, td, pre {
+	padding			: 0px;
+	margin			: 0px;
+}
+
+img {
+	border			: none;
+}
+
+*:focus { 
+	outline			: 0 none;
+}
+
+pre {
+	height			: auto;
+}
+
+@font-face {
+	font-family		: mwCustom_light;
+	src			: url(/cms3t/res/Sansation_Light.ttf);
+}
+
+@font-face {
+	font-family		: mwCustom_normal;
+	src			: url(/cms3t/res/Sansation_Regular.ttf);
+}
+
+@font-face {
+	font-family		: mwCustom_bold;
+	src			: url(/cms3t/res/Sansation_Bold.ttf);
+}
+
+.absoluteFill {
+	position		: absolute !important;
+	
+	top			: 0;
+	bottom			: 0;
+	left			: 0;
+	right			: 0;
+	
+	height			: auto !important;
+}
+
+.unselectable {
+	-webkit-touch-callout	: none;
+	-webkit-user-select	: none;
+	-khtml-user-select	: none;
+	-moz-user-select	: none;
+	-ms-user-select		: none;
+	user-select		: none;
+}
+
+.Clear
+{
+	clear			: both;
+}
+
+.Clear:after,
+.clear:after 
+{
+	content			: '';
+	display			: block;
+	clear			: both;
+}
+
+img.loading {
+	background		: url('/cms3t/res/images/loaders/bar.sc.gif') no-repeat transparent center center;	
+}
+
+.notransitions,
+.notransitions * {
+	-webkit-transition	: none !important;
+	-moz-transition		: none !important;
+	-o-transition		: none !important;
+	-ms-transition		: none !important;
+	transition		: none !important;
+}

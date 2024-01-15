@@ -1,0 +1,182 @@
+/* Sidr Responsive Menu Styles*/
+
+
+
+
+
+
+
+.sidr { display: none; position: absolute; position: fixed; top: 0; height: 100%; z-index: 999999; width: 260px; overflow-x: none; overflow-y: auto; background: #01416f }
+
+.sidr .sidr-inner { padding: 0 0 15px }
+
+.sidr .sidr-inner>p { margin-left: 15px; margin-right: 15px }
+
+.sidr.right { left: auto; right: -260px }
+
+.sidr.left { left: -260px; right: auto }
+
+.sidr ul {display: block;margin: 15px 0;padding: 0;font-size: 10pt;}
+
+.sidr ul li {display: block;margin: 0;line-height: 42px;-webkit-transition: all .3s ease;-moz-transition: all .3s ease;-o-transition: all .3s ease;position: relative;z-index: 8;border: 0;}
+
+.sidr ul li.active, .sidr ul li.sidr-class-active, .sidr ul li:hover { background: #999; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease }
+
+.sidr ul li a, .sidr ul li span {padding: 0 15px;display: block;text-decoration: none;letter-spacing: 1px;text-transform: uppercase;font-size: 9pt;}
+
+.sidr ul li a {color: #fff;}
+
+
+
+.sidr ul li span .sidr-class-fa-caret-down { display: none; }
+
+.sidr ul li ul { border-bottom: none; margin: 0 }
+
+.sidr ul li ul li { font-size: 10pt }
+
+.sidr ul li ul li span {padding-left:5px}
+
+.sidr ul li ul li:last-child { border-bottom: none }
+
+.sidr ul li ul li.active, .sidr ul li ul li.sidr-class-active, .sidr ul li ul li:hover { border-top: none }
+
+.sidr ul li ul li.active>a, .sidr ul li ul li.active>span, .sidr ul li ul li.sidr-class-active>a, .sidr ul li ul li.sidr-class-active>span, .sidr ul li ul li:hover>a, .sidr ul li ul li:hover>span { background: #222; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease }
+
+.sidr ul li ul li a, .sidr ul li ul li span {padding-left: 20px;text-transform: none;}
+
+.sidr ul li a.arrow{display: block;width: 90px;color: #fff;position: absolute;right: 15px;top: 0;z-index: 999;padding: 0;cursor: pointer;text-align: right;}
+
+.sidr ul li a.arrow:after{font-family: FontAwesome;content: "\f105";font-size:14pt;}
+
+.sidr ul li a.downarrow:after{font-family: FontAwesome;content: "\f107";font-size:14pt;}
+
+.sidr ul li a.arrow.open:after{font-family: FontAwesome;content: "\f107";font-size:14pt;}
+
+
+
+
+
+/**
+
+**/
+
+
+
+.sidr ul li ul { display:none }
+
+/* .sidr ul li:hover > ul { display:block}
+
+.sidr-class-has-children:after {font-family: FontAwesome;content: "\f105";font-size:14pt; position:absolute; right:15px; top:0; color:#fff}
+
+li.sidr-class-has-children:hover:after {font-family: FontAwesome;content: "\f107";font-size:14pt; position:absolute; right:15px; top:0; color:#fff} */
+
+
+
+
+
+
+
+.sidr ul li.sidr-class-no-children a.arrow {display:none;}
+
+
+
+.sidr-class-Title {/* width: 80%; */overflow: hidden;}
+
+.sidr form { margin: 0 15px }
+
+.sidr label { font-size: 13px }
+
+.sidr input[type=url], .sidr input[type=text], .sidr input[type=password], .sidr input[type=date], .sidr input[type=datetime], .sidr input[type=email], .sidr input[type=number], .sidr input[type=search], .sidr input[type=tel], .sidr input[type=time], .sidr select, .sidr textarea { width: 100%; font-size: 13px; padding: 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0 0 10px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; border: none; background: rgba(0,0,0,.1); color: rgba(51,51,51,.6); display: block; clear: both }
+
+.sidr input[type=checkbox] { width: auto; display: inline; clear: none }
+
+.sidr input[type=button], .sidr input[type=submit] { color: #f8f8f8; background: #efefef }
+
+.sidr input[type=button]:hover, .sidr input[type=submit]:hover { background: rgba(51,51,51,.9) }
+
+.sidr-mobileExtras { display: block; }
+
+
+
+
+
+
+
+
+
+/* Sidr Social Icons*/
+
+
+
+.sidr-class-fa { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transform: translate(0, 0) }
+
+.sidr-class-soLinkGen {padding: 10px 25px;}
+
+.sidr-class-soLinkGen.sidr-class-center { text-align: left }
+
+.sidr-class-soLinkGen.sidr-class-left { text-align: left }
+
+.sidr-class-soLinkGen.sidr-class-right { text-align: left }
+
+.sidr-class-soLinkGen a {text-decoration: none !important;text-align: center !important;color: #444444;border-radius: 50%;padding: 10px;width: 12px;height: 12px;}
+
+.sidr-class-soLinkGen a.sidr-class-square { text-decoration: none; background: #efefef }
+
+.sidr-class-soLinkGen a.sidr-class-circle{text-decoration: none;background: #efefef;border-radius: 50%;}
+
+.sidr-class-soLinkGen a:hover{ background: #888888; }
+
+.sidr-class-soLinkGen a.sidr-class-square:hover { background: #444444; color: #efefef; }
+
+.sidr-class-soLinkGen a.sidr-class-circle:hover { background: #444444; color: #efefef; }
+
+.sidr-class-soLinkGen a.sidr-class-small {font-size: 10pt;margin: 0 4px;background: #fff;}
+
+.sidr-class-soLinkGen a.sidr-class-medium { font-size: 14pt; margin: 0 5px; background: #fff;}
+
+.sidr-class-soLinkGen a.sidr-class-large { font-size: 18pt; margin: 0 5px;background: #fff; }
+
+.sidr-class-soLinkGen a.sidr-class-huge { font-size: 24pt; margin: 0 5px;background: #fff; }
+
+.sidr-class-soLinkGen a.sidr-class-small.sidr-class-circle {font-size: 11pt;width: 28px;height: 28px;line-height: 29px;margin: 0 1px;padding: 0;}
+
+.sidr-class-soLinkGen a.sidr-class-small.sidr-class-square { font-size: 11pt; width: 28px; height: 28px; line-height: 29px; margin: 0 1px; padding: 0;}
+
+.sidr-class-soLinkGen a.sidr-class-medium.sidr-class-circle { font-size: 14pt; width: 44px; height: 44px; line-height: 44px; margin: 0 2px;padding: 0; }
+
+.sidr-class-soLinkGen a.sidr-class-medium.sidr-class-square { font-size: 14pt; width: 44px; height: 44px; line-height: 44px; margin: 0 2px; padding: 0;}
+
+.sidr-class-soLinkGen a.sidr-class-large.sidr-class-circle { font-size: 18pt; width: 56px; height: 56px; line-height: 56px; margin: 0 2px;padding: 0; }
+
+.sidr-class-soLinkGen a.sidr-class-large.sidr-class-square { font-size: 18pt; width: 56px; height: 56px; line-height: 56px; margin: 0 2px;padding: 0; }
+
+.sidr-class-soLinkGen a.sidr-class-huge.sidr-class-circle { font-size: 24pt; width: 64px; height: 64px; line-height: 64px; margin: 0 2px;padding: 0; }
+
+.sidr-class-soLinkGen a.sidr-class-huge.sidr-class-square { font-size: 24pt; width: 64px; height: 64px; line-height: 64px; margin: 0 2px;padding: 0; }
+
+
+
+.sidr-class-fa-facebook:before { content: "\f09a" }
+
+.sidr-class-fa-twitter:before { content: "\f099" }
+
+.sidr-class-fa-linkedin:before { content: "\f0e1" }
+
+.sidr-class-fa-googleplus:before { content: "\f1a0" }
+
+.sidr-class-fa-vimeo:before { content: "\f194" }
+
+.sidr-class-fa-instagram:before { content: "\f16d" }
+
+.sidr-class-fa-flickr:before { content: "\f16e" }
+
+.sidr-class-fa-pinterest:before { content: "\f0d2" }
+
+.sidr-class-fa-rss:before { content: "\f09e" }
+
+.sidr-class-fa-yahoo:before { content: "\f19e" }
+
+.sidr-class-fa-youtube:before { content: "\f167" }
+
+.sidr-class-fa-instagram:before { content: "\f16d" }
+

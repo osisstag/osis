@@ -1,0 +1,2463 @@
+
+/* ---- GENERAL ------------------------------------------------------------------------------------------------------------- */
+
+.mwDialog,
+.mwDialog *,
+.mwDialog *:before,
+.mwDialog *:after {
+	box-sizing		: border-box !important;
+}
+
+.mwWindow .mwDialog,
+.mwWindow .mwDialog *,
+.mwWindow .mwDialog *:before,
+.mwWindow .mwDialog *:after {
+	box-sizing		: border-box !important;
+}
+
+/* Default Font settings for dialogs */
+.mwInput,
+.mwDialog,
+.mwDialog textarea,
+.mwDialog select,
+.mwDialog input,
+.mwDialog option {
+	font-family		: 'Open Sans', sans-serif;
+	font-size		: 14px;
+	font-weight		: normal;
+	font-style		: normal;
+	color			: gray;
+}
+
+.mwInput.code,
+.mwInput.code textarea,
+.mwInput.code select,
+.mwInput.code input {
+	font			: normal 14px Consolas, Lucida Console, Courier New, Verdana, Arial;
+}
+
+/* ---- LAYOUT -------------------------------------------------------------------------------------------------------------- */
+
+/*
+	Dialogs support 4 main layouts
+	table.mwDialog.tall > TR>th + TR>TD as tall table dialog
+	table.mwDialog.wide > TR>th+TD as wide table dialog
+	dl.mwDialog.tall/wide > dt > dd as modern layout dialogs
+	Default layout (without tall/wide modifier) assumes tall
+	Basic layouts, without defined wrappers are partially supported, tho not recommended
+
+*/
+
+dl.mwDialog,
+.mwDialog dl,
+.mwDialog dt,
+.mwDialog dd {
+	margin			: 0px;
+	overflow		: hidden; 
+}
+
+dl.mwDialog,
+.mwDialog dl {
+	margin			: 0px -4px; 
+}
+
+.mwDialog dt,
+.mwDialog th,
+.mwDialog label,
+.mwDialog .label {
+	border			: none;
+	border-spacing		: 0px;
+
+	padding			: 14px 0px 6px 0px;
+	line-height		: 20px;
+
+	color			: gray;
+
+	font-family		: inherit;
+	font-size		: 14px;
+	font-weight		: normal;
+
+	text-align		: left;
+	vertical-align		: top;
+	
+	clear			: both;
+	white-space		: normal;
+}
+
+.mwDialog dt:before,
+.mwDialog th:before,
+.mwDialog label:before,
+.mwDialog .label:before {
+	content			: '';
+	display			: block;
+	float			: left;
+	width			: 4px;
+	height			: 1px;
+/*	background		: red; */
+}
+
+.mwDialog dd label,
+.mwDialog td label {
+	display			: inline-block;
+	padding			: 10px 0px 10px 0px;
+}
+
+.mwDialog dt,
+.mwDialog label,
+.mwDialog .label {
+	display			: block;
+}
+
+.mwDialog.wide dt,
+.mwDialog.wide th,
+.mwDialog.wide label,
+.mwDialog.wide .label,
+.mwDialog.tools dt
+{
+	width			: 40%; 
+
+	padding			: 10px 0px 10px 0px;
+	text-align		: left;
+}
+
+.mwDialog.wide dt,
+.mwDialog.wide label,
+.mwDialog.wide .label {
+	float			: left;
+}
+
+.mwDialog.wide dd {
+	float			: right;
+	width			: 60%;
+}
+
+.mwDialog.wide dd label,
+.mwDialog.wide td label {
+	width			: auto;
+}
+
+
+
+.mwDialog dd.text,
+.mwDialog td.text {
+	margin			: 0px;
+	height			: 20px;
+	line-height		: 20px;
+}
+
+.mwDialog dt.num,
+.mwDialog th.num,
+.mwDialog label.num,
+.mwDialog .label.num {
+	text-align		: center;
+}
+
+/* ---- Floats ---- */
+
+.mwDialog dt.left,
+.mwDialog dd.left
+{
+	width			: auto;
+	float			: left;
+}
+
+.mwDialog dt.right,
+.mwDialog dd.right
+{
+	width			: auto;
+	float			: right;
+}
+
+.mwDialog dt.auto,
+.mwDialog dd.auto
+{
+	width			: auto;
+	float			: none;
+}
+
+.mwDialog.shiftUp:not(.wide):not(.tools):not(table)
+{
+	margin-top		: -18px; 
+}
+
+/* ---- Label Cells ---- */
+
+/* These behave similar as inputs to match corresponding cell inputs */
+.mwDialog dt label
+{
+	padding			: 0px;
+	margin			: 0px 4px 0px 4px;
+}
+
+.mwDialog dt label:before
+{
+	display			: none;
+}
+
+/* First and last labels compensate parent paddings */
+.mwDialog dt label:first-child
+{
+	margin-left		: 0px;
+	margin-right		: 4px;
+}
+
+.mwDialog dt label:last-child
+{
+	margin-right		: 4px;
+}
+
+/* ---- table ----*/
+
+.mwDialog form>table,
+.mwDialog>table,
+table.mwDialog {
+	width			: 100%;
+	border-collapse		: collapse;
+}
+
+.mwDialog form>table.two-column,
+.mwDialog>table.two-column,
+table.mwDialog.two-column { 
+	width			: 50%;
+	float			: left;
+}
+
+.mwDialog TR {
+	padding			: 0px;
+	margin			: 0px;
+	
+	border			: none;
+	border-spacing		: 0px;
+}
+
+/* ---- Groups -------------------------------------------------------------------------------------------------------------- */
+
+.mwDialog .formGroup {
+	position		: relative;
+	float			: none;
+	clear			: both;
+
+	padding			: 14px 4px 6px 4px;
+	line-height		: 20px;
+	
+	font-family		: inherit;
+	font-size		: 16px;
+	font-weight		: 400;
+	
+	color			: #2EB7A0;
+	
+	text-align		: left;
+/*	white-space		: nowrap; */
+	overflow		: hidden;
+}
+
+.mwDialog.wide .formGroup {
+	float			: none;
+	clear			: both;
+	width			: auto;
+	
+	padding-right		: calc(60% + 4px);
+	text-align		: left;
+	
+}
+
+
+.mwDialog .formGroup div {
+	display			: inline-block;
+}
+
+/* ---- Hints --------------------------------------------------------------------------------------------------------------- */
+
+.mwDialog .hint {
+	
+	min-height		: 40px;
+	padding			: 4px 4px;
+	
+	font-family		: inherit;
+	font-size		: 13px;
+	font-weight		: normal;
+
+	color			: gray;
+	
+	text-align		: left;
+	vertical-align		: top;
+}
+
+.mwDialog td.hint {
+	height			: 40px;
+}
+
+.mwDialog .hint.left {
+	text-align		: left;
+}
+
+/* ---- INPUTS GENERAL ------------------------------------------------------------------------------------------------------ */
+
+.mwInput {
+	position		: relative;
+
+/*	height			: 32px; */
+
+	padding			: 0px 8px;
+	margin			: 4px 4px 4px 4px;
+
+	border-width		: 1px;
+	border-style		: solid;
+
+	overflow		: hidden; 
+
+	transition		: all 0.2s;
+}
+
+.mwInput{
+	border-color		: #DEDEDE;
+	color			: gray;
+	background		: #FFFFFF; 
+}
+
+.combo .mwInput {
+	border-color		: #DEDEDE !important;
+}
+
+.mwInput .divider {
+	border-color		: #DEDEDE !important;
+}
+
+.mwInput.focus{
+	border-color		: #AAAAAA;
+	color			: black;
+	background		: #FFFFFF; 
+}
+
+.combo.focus .mwInput {
+	border-color		: #AAAAAA !important;
+}
+
+.mwInput.focus .divider {
+	border-color		: #AAAAAA !important;
+}
+
+.mwInput.hover{
+	border-color		: #AAAAAA;
+	color			: black;
+	background		: #FFFFFF; 
+}
+
+.combo.hover .mwInput {
+	border-color		: #AAAAAA !important;
+}
+
+.mwInput.hover .divider {
+	border-color		: #AAAAAA !important;
+}
+
+.mwInput.error{
+	border-color		: #FF0000;
+	color			: #FF0000;
+	background		: #FFFFFF; 
+}
+
+.combo.error .mwInput {
+	border-color		: #FF0000 !important;
+}
+
+.mwInput.error .divider {
+	border-color		: #FF0000 !important;
+}
+
+.mwInput.success{
+	border-color		: #2EB7A0;
+	color			: #2EB7A0;
+	background		: #FFFFFF; 
+}
+
+.combo.success .mwInput {
+	border-color		: #2EB7A0 !important;
+}
+
+.mwInput.success .divider {
+	border-color		: #2EB7A0 !important;
+}
+
+.mwInput.disabled{
+	border-color		: silver;
+	color			: silver;
+	background		: #FFFFFF; 
+}
+
+.combo.disabled .mwInput {
+	border-color		: silver !important;
+}
+
+.mwInput.disabled .divider {
+	border-color		: silver !important;
+}
+
+
+/* ---- Input Icons ---- */
+
+.mwInput.icon, 
+.mwInput.icon.left, 
+.mwInput .subInput.icon.left
+{
+	padding-left		: 32px; 
+	padding-right		: 8px; 
+}
+
+.mwInput.icon.right,
+.mwInput .subInput.icon.right
+{
+	padding-left		: 8px; 
+	padding-right		: 32px; 
+}
+
+
+.mwInput .icon { position: relative; }
+.mwInput .icon:before { content: ''; display: block; width: 28px; height: 28px; margin: 2px; position: absolute; top: 50%; margin-top: -14px; pointer-events: none; background: url('/cms3t/res/images/dialogs/icons.28x.png') no-repeat transparent; background-position: 28px 0px; }
+.mwInput .icon.left:before { left: 0; right: auto; margin-left: 2px; margin-right: 0px; }
+.mwInput .icon:before, .mwInput .icon.center:before { left: 50%; right: auto; margin-left: -14px; margin-right: 0px; }
+.mwInput .icon.right:before { left: auto; right: 0; margin-left: 0px; margin-right: 2px; }
+.mwInput .icon.selected:before { background-position: -0px -28px; }
+.mwInput .icon.selected.hi:before { background-position: -0px -56px; }
+.mwInput .icon.selected.focus:before { background-position: -0px -56px; }
+.mwInput .icon.selected.hover:before { background-position: -0px -56px; }
+.mwInput .icon.selected.hi.hover:before { background-position: -0px -28px; }
+.mwInput .icon.declined:before { background-position: -28px -28px; }
+.mwInput .icon.declined.hi:before { background-position: -28px -56px; }
+.mwInput .icon.declined.focus:before { background-position: -28px -56px; }
+.mwInput .icon.declined.hover:before { background-position: -28px -56px; }
+.mwInput .icon.declined.hi.hover:before { background-position: -28px -28px; }
+.mwInput .icon.delete:before { background-position: -56px -28px; }
+.mwInput .icon.delete.hi:before { background-position: -56px -56px; }
+.mwInput .icon.delete.focus:before { background-position: -56px -56px; }
+.mwInput .icon.delete.hover:before { background-position: -56px -56px; }
+.mwInput .icon.delete.hi.hover:before { background-position: -56px -28px; }
+.mwInput .icon.dropdown:before { background-position: -84px -28px; }
+.mwInput .icon.dropdown.hi:before { background-position: -84px -56px; }
+.mwInput .icon.dropdown.focus:before { background-position: -84px -56px; }
+.mwInput .icon.dropdown.hover:before { background-position: -84px -56px; }
+.mwInput .icon.dropdown.hi.hover:before { background-position: -84px -28px; }
+.mwInput .icon.expand:before { background-position: -112px -28px; }
+.mwInput .icon.expand.hi:before { background-position: -112px -56px; }
+.mwInput .icon.expand.focus:before { background-position: -112px -56px; }
+.mwInput .icon.expand.hover:before { background-position: -112px -56px; }
+.mwInput .icon.expand.hi.hover:before { background-position: -112px -28px; }
+.mwInput .icon.collapse:before { background-position: -140px -28px; }
+.mwInput .icon.collapse.hi:before { background-position: -140px -56px; }
+.mwInput .icon.collapse.focus:before { background-position: -140px -56px; }
+.mwInput .icon.collapse.hover:before { background-position: -140px -56px; }
+.mwInput .icon.collapse.hi.hover:before { background-position: -140px -28px; }
+.mwInput .icon.plus:before { background-position: -168px -28px; }
+.mwInput .icon.plus.hi:before { background-position: -168px -56px; }
+.mwInput .icon.plus.focus:before { background-position: -168px -56px; }
+.mwInput .icon.plus.hover:before { background-position: -168px -56px; }
+.mwInput .icon.plus.hi.hover:before { background-position: -168px -28px; }
+.mwInput .icon.ok:before { background-position: -196px -28px; }
+.mwInput .icon.ok.hi:before { background-position: -196px -56px; }
+.mwInput .icon.ok.focus:before { background-position: -196px -56px; }
+.mwInput .icon.ok.hover:before { background-position: -196px -56px; }
+.mwInput .icon.ok.hi.hover:before { background-position: -196px -28px; }
+.mwInput .icon.upload:before { background-position: -224px -28px; }
+.mwInput .icon.upload.hi:before { background-position: -224px -56px; }
+.mwInput .icon.upload.focus:before { background-position: -224px -56px; }
+.mwInput .icon.upload.hover:before { background-position: -224px -56px; }
+.mwInput .icon.upload.hi.hover:before { background-position: -224px -28px; }
+.mwInput .icon.download:before { background-position: -252px -28px; }
+.mwInput .icon.download.hi:before { background-position: -252px -56px; }
+.mwInput .icon.download.focus:before { background-position: -252px -56px; }
+.mwInput .icon.download.hover:before { background-position: -252px -56px; }
+.mwInput .icon.download.hi.hover:before { background-position: -252px -28px; }
+.mwInput .icon.search:before { background-position: -280px -28px; }
+.mwInput .icon.search.hi:before { background-position: -280px -56px; }
+.mwInput .icon.search.focus:before { background-position: -280px -56px; }
+.mwInput .icon.search.hover:before { background-position: -280px -56px; }
+.mwInput .icon.search.hi.hover:before { background-position: -280px -28px; }
+.mwInput .icon.edit:before { background-position: -308px -28px; }
+.mwInput .icon.edit.hi:before { background-position: -308px -56px; }
+.mwInput .icon.edit.focus:before { background-position: -308px -56px; }
+.mwInput .icon.edit.hover:before { background-position: -308px -56px; }
+.mwInput .icon.edit.hi.hover:before { background-position: -308px -28px; }
+.mwInput .icon.more:before { background-position: -336px -28px; }
+.mwInput .icon.more.hi:before { background-position: -336px -56px; }
+.mwInput .icon.more.focus:before { background-position: -336px -56px; }
+.mwInput .icon.more.hover:before { background-position: -336px -56px; }
+.mwInput .icon.more.hi.hover:before { background-position: -336px -28px; }
+.mwInput .icon.properties:before { background-position: -364px -28px; }
+.mwInput .icon.properties.hi:before { background-position: -364px -56px; }
+.mwInput .icon.properties.focus:before { background-position: -364px -56px; }
+.mwInput .icon.properties.hover:before { background-position: -364px -56px; }
+.mwInput .icon.properties.hi.hover:before { background-position: -364px -28px; }
+.mwInput .icon.hDrag:before { background-position: -392px -28px; }
+.mwInput .icon.hDrag.hi:before { background-position: -392px -56px; }
+.mwInput .icon.hDrag.focus:before { background-position: -392px -56px; }
+.mwInput .icon.hDrag.hover:before { background-position: -392px -56px; }
+.mwInput .icon.hDrag.hi.hover:before { background-position: -392px -28px; }
+.mwInput .icon.vDrag:before { background-position: -420px -28px; }
+.mwInput .icon.vDrag.hi:before { background-position: -420px -56px; }
+.mwInput .icon.vDrag.focus:before { background-position: -420px -56px; }
+.mwInput .icon.vDrag.hover:before { background-position: -420px -56px; }
+.mwInput .icon.vDrag.hi.hover:before { background-position: -420px -28px; }
+.mwInput .icon.thumbs:before { background-position: -448px -28px; }
+.mwInput .icon.thumbs.hi:before { background-position: -448px -56px; }
+.mwInput .icon.thumbs.focus:before { background-position: -448px -56px; }
+.mwInput .icon.thumbs.hover:before { background-position: -448px -56px; }
+.mwInput .icon.thumbs.hi.hover:before { background-position: -448px -28px; }
+.mwInput .icon.details:before { background-position: -476px -28px; }
+.mwInput .icon.details.hi:before { background-position: -476px -56px; }
+.mwInput .icon.details.focus:before { background-position: -476px -56px; }
+.mwInput .icon.details.hover:before { background-position: -476px -56px; }
+.mwInput .icon.details.hi.hover:before { background-position: -476px -28px; }
+.mwInput .icon.list:before { background-position: -504px -28px; }
+.mwInput .icon.list.hi:before { background-position: -504px -56px; }
+.mwInput .icon.list.focus:before { background-position: -504px -56px; }
+.mwInput .icon.list.hover:before { background-position: -504px -56px; }
+.mwInput .icon.list.hi.hover:before { background-position: -504px -28px; }
+.mwInput .icon.lock:before { background-position: -532px -28px; }
+.mwInput .icon.lock.hi:before { background-position: -532px -56px; }
+.mwInput .icon.lock.focus:before { background-position: -532px -56px; }
+.mwInput .icon.lock.hover:before { background-position: -532px -56px; }
+.mwInput .icon.lock.hi.hover:before { background-position: -532px -28px; }
+.mwInput .icon.unlock:before { background-position: -560px -28px; }
+.mwInput .icon.unlock.hi:before { background-position: -560px -56px; }
+.mwInput .icon.unlock.focus:before { background-position: -560px -56px; }
+.mwInput .icon.unlock.hover:before { background-position: -560px -56px; }
+.mwInput .icon.unlock.hi.hover:before { background-position: -560px -28px; }
+.mwInput .icon.date:before { background-position: -588px -28px; }
+.mwInput .icon.date.hi:before { background-position: -588px -56px; }
+.mwInput .icon.date.focus:before { background-position: -588px -56px; }
+.mwInput .icon.date.hover:before { background-position: -588px -56px; }
+.mwInput .icon.date.hi.hover:before { background-position: -588px -28px; }
+.mwInput .icon.time:before { background-position: -616px -28px; }
+.mwInput .icon.time.hi:before { background-position: -616px -56px; }
+.mwInput .icon.time.focus:before { background-position: -616px -56px; }
+.mwInput .icon.time.hover:before { background-position: -616px -56px; }
+.mwInput .icon.time.hi.hover:before { background-position: -616px -28px; }
+
+.mwInput.icon { position: relative; }
+.mwInput.icon:before { content: ''; display: block; width: 28px; height: 28px; margin: 2px; position: absolute; top: 50%; margin-top: -14px; pointer-events: none; background: url('/cms3t/res/images/dialogs/icons.28x.png') no-repeat transparent; background-position: 28px 0px; }
+.mwInput.icon:before, .mwInput.icon.left:before { left: 0; right: auto; margin-left: 2px; margin-right: 0px; }
+.mwInput.icon.center:before { left: 50%; right: auto; margin-left: -14px; margin-right: 0px; }
+.mwInput.icon.right:before { left: auto; right: 0; margin-left: 0px; margin-right: 2px; }
+.mwInput.icon.selected:before { background-position: -0px -28px; }
+.mwInput.icon.selected.hi:before { background-position: -0px -56px; }
+.mwInput.icon.selected.focus:before { background-position: -0px -56px; }
+.mwInput.icon.selected.hover:before { background-position: -0px -56px; }
+.mwInput.icon.selected.hi.hover:before { background-position: -0px -28px; }
+.mwInput.icon.declined:before { background-position: -28px -28px; }
+.mwInput.icon.declined.hi:before { background-position: -28px -56px; }
+.mwInput.icon.declined.focus:before { background-position: -28px -56px; }
+.mwInput.icon.declined.hover:before { background-position: -28px -56px; }
+.mwInput.icon.declined.hi.hover:before { background-position: -28px -28px; }
+.mwInput.icon.delete:before { background-position: -56px -28px; }
+.mwInput.icon.delete.hi:before { background-position: -56px -56px; }
+.mwInput.icon.delete.focus:before { background-position: -56px -56px; }
+.mwInput.icon.delete.hover:before { background-position: -56px -56px; }
+.mwInput.icon.delete.hi.hover:before { background-position: -56px -28px; }
+.mwInput.icon.dropdown:before { background-position: -84px -28px; }
+.mwInput.icon.dropdown.hi:before { background-position: -84px -56px; }
+.mwInput.icon.dropdown.focus:before { background-position: -84px -56px; }
+.mwInput.icon.dropdown.hover:before { background-position: -84px -56px; }
+.mwInput.icon.dropdown.hi.hover:before { background-position: -84px -28px; }
+.mwInput.icon.expand:before { background-position: -112px -28px; }
+.mwInput.icon.expand.hi:before { background-position: -112px -56px; }
+.mwInput.icon.expand.focus:before { background-position: -112px -56px; }
+.mwInput.icon.expand.hover:before { background-position: -112px -56px; }
+.mwInput.icon.expand.hi.hover:before { background-position: -112px -28px; }
+.mwInput.icon.collapse:before { background-position: -140px -28px; }
+.mwInput.icon.collapse.hi:before { background-position: -140px -56px; }
+.mwInput.icon.collapse.focus:before { background-position: -140px -56px; }
+.mwInput.icon.collapse.hover:before { background-position: -140px -56px; }
+.mwInput.icon.collapse.hi.hover:before { background-position: -140px -28px; }
+.mwInput.icon.plus:before { background-position: -168px -28px; }
+.mwInput.icon.plus.hi:before { background-position: -168px -56px; }
+.mwInput.icon.plus.focus:before { background-position: -168px -56px; }
+.mwInput.icon.plus.hover:before { background-position: -168px -56px; }
+.mwInput.icon.plus.hi.hover:before { background-position: -168px -28px; }
+.mwInput.icon.ok:before { background-position: -196px -28px; }
+.mwInput.icon.ok.hi:before { background-position: -196px -56px; }
+.mwInput.icon.ok.focus:before { background-position: -196px -56px; }
+.mwInput.icon.ok.hover:before { background-position: -196px -56px; }
+.mwInput.icon.ok.hi.hover:before { background-position: -196px -28px; }
+.mwInput.icon.upload:before { background-position: -224px -28px; }
+.mwInput.icon.upload.hi:before { background-position: -224px -56px; }
+.mwInput.icon.upload.focus:before { background-position: -224px -56px; }
+.mwInput.icon.upload.hover:before { background-position: -224px -56px; }
+.mwInput.icon.upload.hi.hover:before { background-position: -224px -28px; }
+.mwInput.icon.download:before { background-position: -252px -28px; }
+.mwInput.icon.download.hi:before { background-position: -252px -56px; }
+.mwInput.icon.download.focus:before { background-position: -252px -56px; }
+.mwInput.icon.download.hover:before { background-position: -252px -56px; }
+.mwInput.icon.download.hi.hover:before { background-position: -252px -28px; }
+.mwInput.icon.search:before { background-position: -280px -28px; }
+.mwInput.icon.search.hi:before { background-position: -280px -56px; }
+.mwInput.icon.search.focus:before { background-position: -280px -56px; }
+.mwInput.icon.search.hover:before { background-position: -280px -56px; }
+.mwInput.icon.search.hi.hover:before { background-position: -280px -28px; }
+.mwInput.icon.edit:before { background-position: -308px -28px; }
+.mwInput.icon.edit.hi:before { background-position: -308px -56px; }
+.mwInput.icon.edit.focus:before { background-position: -308px -56px; }
+.mwInput.icon.edit.hover:before { background-position: -308px -56px; }
+.mwInput.icon.edit.hi.hover:before { background-position: -308px -28px; }
+.mwInput.icon.more:before { background-position: -336px -28px; }
+.mwInput.icon.more.hi:before { background-position: -336px -56px; }
+.mwInput.icon.more.focus:before { background-position: -336px -56px; }
+.mwInput.icon.more.hover:before { background-position: -336px -56px; }
+.mwInput.icon.more.hi.hover:before { background-position: -336px -28px; }
+.mwInput.icon.properties:before { background-position: -364px -28px; }
+.mwInput.icon.properties.hi:before { background-position: -364px -56px; }
+.mwInput.icon.properties.focus:before { background-position: -364px -56px; }
+.mwInput.icon.properties.hover:before { background-position: -364px -56px; }
+.mwInput.icon.properties.hi.hover:before { background-position: -364px -28px; }
+.mwInput.icon.hDrag:before { background-position: -392px -28px; }
+.mwInput.icon.hDrag.hi:before { background-position: -392px -56px; }
+.mwInput.icon.hDrag.focus:before { background-position: -392px -56px; }
+.mwInput.icon.hDrag.hover:before { background-position: -392px -56px; }
+.mwInput.icon.hDrag.hi.hover:before { background-position: -392px -28px; }
+.mwInput.icon.vDrag:before { background-position: -420px -28px; }
+.mwInput.icon.vDrag.hi:before { background-position: -420px -56px; }
+.mwInput.icon.vDrag.focus:before { background-position: -420px -56px; }
+.mwInput.icon.vDrag.hover:before { background-position: -420px -56px; }
+.mwInput.icon.vDrag.hi.hover:before { background-position: -420px -28px; }
+.mwInput.icon.thumbs:before { background-position: -448px -28px; }
+.mwInput.icon.thumbs.hi:before { background-position: -448px -56px; }
+.mwInput.icon.thumbs.focus:before { background-position: -448px -56px; }
+.mwInput.icon.thumbs.hover:before { background-position: -448px -56px; }
+.mwInput.icon.thumbs.hi.hover:before { background-position: -448px -28px; }
+.mwInput.icon.details:before { background-position: -476px -28px; }
+.mwInput.icon.details.hi:before { background-position: -476px -56px; }
+.mwInput.icon.details.focus:before { background-position: -476px -56px; }
+.mwInput.icon.details.hover:before { background-position: -476px -56px; }
+.mwInput.icon.details.hi.hover:before { background-position: -476px -28px; }
+.mwInput.icon.list:before { background-position: -504px -28px; }
+.mwInput.icon.list.hi:before { background-position: -504px -56px; }
+.mwInput.icon.list.focus:before { background-position: -504px -56px; }
+.mwInput.icon.list.hover:before { background-position: -504px -56px; }
+.mwInput.icon.list.hi.hover:before { background-position: -504px -28px; }
+.mwInput.icon.lock:before { background-position: -532px -28px; }
+.mwInput.icon.lock.hi:before { background-position: -532px -56px; }
+.mwInput.icon.lock.focus:before { background-position: -532px -56px; }
+.mwInput.icon.lock.hover:before { background-position: -532px -56px; }
+.mwInput.icon.lock.hi.hover:before { background-position: -532px -28px; }
+.mwInput.icon.unlock:before { background-position: -560px -28px; }
+.mwInput.icon.unlock.hi:before { background-position: -560px -56px; }
+.mwInput.icon.unlock.focus:before { background-position: -560px -56px; }
+.mwInput.icon.unlock.hover:before { background-position: -560px -56px; }
+.mwInput.icon.unlock.hi.hover:before { background-position: -560px -28px; }
+.mwInput.icon.date:before { background-position: -588px -28px; }
+.mwInput.icon.date.hi:before { background-position: -588px -56px; }
+.mwInput.icon.date.focus:before { background-position: -588px -56px; }
+.mwInput.icon.date.hover:before { background-position: -588px -56px; }
+.mwInput.icon.date.hi.hover:before { background-position: -588px -28px; }
+.mwInput.icon.time:before { background-position: -616px -28px; }
+.mwInput.icon.time.hi:before { background-position: -616px -56px; }
+.mwInput.icon.time.focus:before { background-position: -616px -56px; }
+.mwInput.icon.time.hover:before { background-position: -616px -56px; }
+.mwInput.icon.time.hi.hover:before { background-position: -616px -28px; }
+
+.mwInput .subInput.icon { position: relative; }
+.mwInput .subInput.icon:before { content: ''; display: block; width: 28px; height: 28px; margin: 2px; position: absolute; top: 50%; margin-top: -14px; pointer-events: none; background: url('/cms3t/res/images/dialogs/icons.28x.png') no-repeat transparent; background-position: 28px 0px; }
+.mwInput .subInput.icon:before, .mwInput .subInput.icon.left:before { left: 0; right: auto; margin-left: 2px; margin-right: 0px; }
+.mwInput .subInput.icon.center:before { left: 50%; right: auto; margin-left: -14px; margin-right: 0px; }
+.mwInput .subInput.icon.right:before { left: auto; right: 0; margin-left: 0px; margin-right: 2px; }
+.mwInput .subInput.icon.selected:before { background-position: -0px -28px; }
+.mwInput .subInput.icon.selected.hi:before { background-position: -0px -56px; }
+.mwInput .subInput.icon.selected.focus:before { background-position: -0px -56px; }
+.mwInput .subInput.icon.selected.hover:before { background-position: -0px -56px; }
+.mwInput .subInput.icon.selected.hi.hover:before { background-position: -0px -28px; }
+.mwInput .subInput.icon.declined:before { background-position: -28px -28px; }
+.mwInput .subInput.icon.declined.hi:before { background-position: -28px -56px; }
+.mwInput .subInput.icon.declined.focus:before { background-position: -28px -56px; }
+.mwInput .subInput.icon.declined.hover:before { background-position: -28px -56px; }
+.mwInput .subInput.icon.declined.hi.hover:before { background-position: -28px -28px; }
+.mwInput .subInput.icon.delete:before { background-position: -56px -28px; }
+.mwInput .subInput.icon.delete.hi:before { background-position: -56px -56px; }
+.mwInput .subInput.icon.delete.focus:before { background-position: -56px -56px; }
+.mwInput .subInput.icon.delete.hover:before { background-position: -56px -56px; }
+.mwInput .subInput.icon.delete.hi.hover:before { background-position: -56px -28px; }
+.mwInput .subInput.icon.dropdown:before { background-position: -84px -28px; }
+.mwInput .subInput.icon.dropdown.hi:before { background-position: -84px -56px; }
+.mwInput .subInput.icon.dropdown.focus:before { background-position: -84px -56px; }
+.mwInput .subInput.icon.dropdown.hover:before { background-position: -84px -56px; }
+.mwInput .subInput.icon.dropdown.hi.hover:before { background-position: -84px -28px; }
+.mwInput .subInput.icon.expand:before { background-position: -112px -28px; }
+.mwInput .subInput.icon.expand.hi:before { background-position: -112px -56px; }
+.mwInput .subInput.icon.expand.focus:before { background-position: -112px -56px; }
+.mwInput .subInput.icon.expand.hover:before { background-position: -112px -56px; }
+.mwInput .subInput.icon.expand.hi.hover:before { background-position: -112px -28px; }
+.mwInput .subInput.icon.collapse:before { background-position: -140px -28px; }
+.mwInput .subInput.icon.collapse.hi:before { background-position: -140px -56px; }
+.mwInput .subInput.icon.collapse.focus:before { background-position: -140px -56px; }
+.mwInput .subInput.icon.collapse.hover:before { background-position: -140px -56px; }
+.mwInput .subInput.icon.collapse.hi.hover:before { background-position: -140px -28px; }
+.mwInput .subInput.icon.plus:before { background-position: -168px -28px; }
+.mwInput .subInput.icon.plus.hi:before { background-position: -168px -56px; }
+.mwInput .subInput.icon.plus.focus:before { background-position: -168px -56px; }
+.mwInput .subInput.icon.plus.hover:before { background-position: -168px -56px; }
+.mwInput .subInput.icon.plus.hi.hover:before { background-position: -168px -28px; }
+.mwInput .subInput.icon.ok:before { background-position: -196px -28px; }
+.mwInput .subInput.icon.ok.hi:before { background-position: -196px -56px; }
+.mwInput .subInput.icon.ok.focus:before { background-position: -196px -56px; }
+.mwInput .subInput.icon.ok.hover:before { background-position: -196px -56px; }
+.mwInput .subInput.icon.ok.hi.hover:before { background-position: -196px -28px; }
+.mwInput .subInput.icon.upload:before { background-position: -224px -28px; }
+.mwInput .subInput.icon.upload.hi:before { background-position: -224px -56px; }
+.mwInput .subInput.icon.upload.focus:before { background-position: -224px -56px; }
+.mwInput .subInput.icon.upload.hover:before { background-position: -224px -56px; }
+.mwInput .subInput.icon.upload.hi.hover:before { background-position: -224px -28px; }
+.mwInput .subInput.icon.download:before { background-position: -252px -28px; }
+.mwInput .subInput.icon.download.hi:before { background-position: -252px -56px; }
+.mwInput .subInput.icon.download.focus:before { background-position: -252px -56px; }
+.mwInput .subInput.icon.download.hover:before { background-position: -252px -56px; }
+.mwInput .subInput.icon.download.hi.hover:before { background-position: -252px -28px; }
+.mwInput .subInput.icon.search:before { background-position: -280px -28px; }
+.mwInput .subInput.icon.search.hi:before { background-position: -280px -56px; }
+.mwInput .subInput.icon.search.focus:before { background-position: -280px -56px; }
+.mwInput .subInput.icon.search.hover:before { background-position: -280px -56px; }
+.mwInput .subInput.icon.search.hi.hover:before { background-position: -280px -28px; }
+.mwInput .subInput.icon.edit:before { background-position: -308px -28px; }
+.mwInput .subInput.icon.edit.hi:before { background-position: -308px -56px; }
+.mwInput .subInput.icon.edit.focus:before { background-position: -308px -56px; }
+.mwInput .subInput.icon.edit.hover:before { background-position: -308px -56px; }
+.mwInput .subInput.icon.edit.hi.hover:before { background-position: -308px -28px; }
+.mwInput .subInput.icon.more:before { background-position: -336px -28px; }
+.mwInput .subInput.icon.more.hi:before { background-position: -336px -56px; }
+.mwInput .subInput.icon.more.focus:before { background-position: -336px -56px; }
+.mwInput .subInput.icon.more.hover:before { background-position: -336px -56px; }
+.mwInput .subInput.icon.more.hi.hover:before { background-position: -336px -28px; }
+.mwInput .subInput.icon.properties:before { background-position: -364px -28px; }
+.mwInput .subInput.icon.properties.hi:before { background-position: -364px -56px; }
+.mwInput .subInput.icon.properties.focus:before { background-position: -364px -56px; }
+.mwInput .subInput.icon.properties.hover:before { background-position: -364px -56px; }
+.mwInput .subInput.icon.properties.hi.hover:before { background-position: -364px -28px; }
+.mwInput .subInput.icon.hDrag:before { background-position: -392px -28px; }
+.mwInput .subInput.icon.hDrag.hi:before { background-position: -392px -56px; }
+.mwInput .subInput.icon.hDrag.focus:before { background-position: -392px -56px; }
+.mwInput .subInput.icon.hDrag.hover:before { background-position: -392px -56px; }
+.mwInput .subInput.icon.hDrag.hi.hover:before { background-position: -392px -28px; }
+.mwInput .subInput.icon.vDrag:before { background-position: -420px -28px; }
+.mwInput .subInput.icon.vDrag.hi:before { background-position: -420px -56px; }
+.mwInput .subInput.icon.vDrag.focus:before { background-position: -420px -56px; }
+.mwInput .subInput.icon.vDrag.hover:before { background-position: -420px -56px; }
+.mwInput .subInput.icon.vDrag.hi.hover:before { background-position: -420px -28px; }
+.mwInput .subInput.icon.thumbs:before { background-position: -448px -28px; }
+.mwInput .subInput.icon.thumbs.hi:before { background-position: -448px -56px; }
+.mwInput .subInput.icon.thumbs.focus:before { background-position: -448px -56px; }
+.mwInput .subInput.icon.thumbs.hover:before { background-position: -448px -56px; }
+.mwInput .subInput.icon.thumbs.hi.hover:before { background-position: -448px -28px; }
+.mwInput .subInput.icon.details:before { background-position: -476px -28px; }
+.mwInput .subInput.icon.details.hi:before { background-position: -476px -56px; }
+.mwInput .subInput.icon.details.focus:before { background-position: -476px -56px; }
+.mwInput .subInput.icon.details.hover:before { background-position: -476px -56px; }
+.mwInput .subInput.icon.details.hi.hover:before { background-position: -476px -28px; }
+.mwInput .subInput.icon.list:before { background-position: -504px -28px; }
+.mwInput .subInput.icon.list.hi:before { background-position: -504px -56px; }
+.mwInput .subInput.icon.list.focus:before { background-position: -504px -56px; }
+.mwInput .subInput.icon.list.hover:before { background-position: -504px -56px; }
+.mwInput .subInput.icon.list.hi.hover:before { background-position: -504px -28px; }
+.mwInput .subInput.icon.lock:before { background-position: -532px -28px; }
+.mwInput .subInput.icon.lock.hi:before { background-position: -532px -56px; }
+.mwInput .subInput.icon.lock.focus:before { background-position: -532px -56px; }
+.mwInput .subInput.icon.lock.hover:before { background-position: -532px -56px; }
+.mwInput .subInput.icon.lock.hi.hover:before { background-position: -532px -28px; }
+.mwInput .subInput.icon.unlock:before { background-position: -560px -28px; }
+.mwInput .subInput.icon.unlock.hi:before { background-position: -560px -56px; }
+.mwInput .subInput.icon.unlock.focus:before { background-position: -560px -56px; }
+.mwInput .subInput.icon.unlock.hover:before { background-position: -560px -56px; }
+.mwInput .subInput.icon.unlock.hi.hover:before { background-position: -560px -28px; }
+.mwInput .subInput.icon.date:before { background-position: -588px -28px; }
+.mwInput .subInput.icon.date.hi:before { background-position: -588px -56px; }
+.mwInput .subInput.icon.date.focus:before { background-position: -588px -56px; }
+.mwInput .subInput.icon.date.hover:before { background-position: -588px -56px; }
+.mwInput .subInput.icon.date.hi.hover:before { background-position: -588px -28px; }
+.mwInput .subInput.icon.time:before { background-position: -616px -28px; }
+.mwInput .subInput.icon.time.hi:before { background-position: -616px -56px; }
+.mwInput .subInput.icon.time.focus:before { background-position: -616px -56px; }
+.mwInput .subInput.icon.time.hover:before { background-position: -616px -56px; }
+.mwInput .subInput.icon.time.hi.hover:before { background-position: -616px -28px; }
+
+/* ---- Input PFX ---- */
+
+/* 
+	Unfortunately can't do true fill with auto width on input
+	Still setting auto, width can be corrected with size attribute on form
+*/
+
+div.mwInput[data-prefix] input {
+	width			: auto;
+}
+
+.mwInput[data-prefix]:before {
+	content			: attr(data-prefix);
+	display			: block;
+	float			: left;
+	
+	padding-right		: 8px;
+	
+	color: gray; font-size: 125%;
+	
+}
+
+.mwInput.focus[data-prefix]:before,
+.mwInput.hover[data-prefix]:before
+{
+	color			: #2EB7A0;
+}
+
+/* Suffix */
+
+div.mwInput[data-suffix] input {
+	width			: auto;
+}
+
+.mwInput[data-suffix]:before {
+	content			: attr(data-suffix);
+	display			: block;
+	float			: right;
+	
+	padding-left		: 8px;
+	
+	color: gray; font-size: 125%;
+	
+}
+
+.mwInput.focus[data-suffix]:before,
+.mwInput.hover[data-suffix]:before
+{
+	color			: #2EB7A0;
+}
+
+/* ---- Input Subcontrols ---- */
+
+.mwInput .subcontrol {
+	position		: absolute;
+/*/
+	right			: 1px;
+	top			: 1px;
+/*/
+	right			: 0px;
+	top			: 0px;
+/**/
+	width			: 30px;
+	height			: 31px;
+
+	padding			: 0px;	
+
+	text-align		: center;
+	cursor			: pointer;
+
+	background		: center no-repeat transparent;
+}
+
+.mwInput .subcontrol div {
+	background		: center no-repeat transparent;
+	width			: 100%;
+	height			: 100%;
+}
+
+.mwInput .subcontrol.button { position: relative; }
+.mwInput .subcontrol.button:before { content: ''; display: block; width: 28px; height: 28px; margin: 1px; position: absolute; top: 50%; margin-top: -14px; pointer-events: none; background: url('/cms3t/res/images/dialogs/icons.28x.png') no-repeat transparent; background-position: 28px 0px; }
+.mwInput .subcontrol.button.left:before { left: 0; right: auto; margin-left: 1px; margin-right: 0px; }
+.mwInput .subcontrol.button:before, .mwInput .subcontrol.button.center:before { left: 50%; right: auto; margin-left: -14px; margin-right: 0px; }
+.mwInput .subcontrol.button.right:before { left: auto; right: 0; margin-left: 0px; margin-right: 1px; }
+.mwInput .subcontrol.button.selected:before { background-position: -0px 0px; }
+.mwInput .subcontrol.button.selected.blank:before { background-position: -0px -56px; }
+.mwInput .subcontrol.button.selected.gray:before { background-position: -0px -28px; }
+.mwInput .subcontrol.button.declined:before { background-position: -28px 0px; }
+.mwInput .subcontrol.button.declined.blank:before { background-position: -28px -56px; }
+.mwInput .subcontrol.button.declined.gray:before { background-position: -28px -28px; }
+.mwInput .subcontrol.button.delete:before { background-position: -56px 0px; }
+.mwInput .subcontrol.button.delete.blank:before { background-position: -56px -56px; }
+.mwInput .subcontrol.button.delete.gray:before { background-position: -56px -28px; }
+.mwInput .subcontrol.button.dropdown:before { background-position: -84px 0px; }
+.mwInput .subcontrol.button.dropdown.blank:before { background-position: -84px -56px; }
+.mwInput .subcontrol.button.dropdown.gray:before { background-position: -84px -28px; }
+.mwInput .subcontrol.button.expand:before { background-position: -112px 0px; }
+.mwInput .subcontrol.button.expand.blank:before { background-position: -112px -56px; }
+.mwInput .subcontrol.button.expand.gray:before { background-position: -112px -28px; }
+.mwInput .subcontrol.button.collapse:before { background-position: -140px 0px; }
+.mwInput .subcontrol.button.collapse.blank:before { background-position: -140px -56px; }
+.mwInput .subcontrol.button.collapse.gray:before { background-position: -140px -28px; }
+.mwInput .subcontrol.button.plus:before { background-position: -168px 0px; }
+.mwInput .subcontrol.button.plus.blank:before { background-position: -168px -56px; }
+.mwInput .subcontrol.button.plus.gray:before { background-position: -168px -28px; }
+.mwInput .subcontrol.button.ok:before { background-position: -196px 0px; }
+.mwInput .subcontrol.button.ok.blank:before { background-position: -196px -56px; }
+.mwInput .subcontrol.button.ok.gray:before { background-position: -196px -28px; }
+.mwInput .subcontrol.button.upload:before { background-position: -224px 0px; }
+.mwInput .subcontrol.button.upload.blank:before { background-position: -224px -56px; }
+.mwInput .subcontrol.button.upload.gray:before { background-position: -224px -28px; }
+.mwInput .subcontrol.button.download:before { background-position: -252px 0px; }
+.mwInput .subcontrol.button.download.blank:before { background-position: -252px -56px; }
+.mwInput .subcontrol.button.download.gray:before { background-position: -252px -28px; }
+.mwInput .subcontrol.button.search:before { background-position: -280px 0px; }
+.mwInput .subcontrol.button.search.blank:before { background-position: -280px -56px; }
+.mwInput .subcontrol.button.search.gray:before { background-position: -280px -28px; }
+.mwInput .subcontrol.button.edit:before { background-position: -308px 0px; }
+.mwInput .subcontrol.button.edit.blank:before { background-position: -308px -56px; }
+.mwInput .subcontrol.button.edit.gray:before { background-position: -308px -28px; }
+.mwInput .subcontrol.button.more:before { background-position: -336px 0px; }
+.mwInput .subcontrol.button.more.blank:before { background-position: -336px -56px; }
+.mwInput .subcontrol.button.more.gray:before { background-position: -336px -28px; }
+.mwInput .subcontrol.button.properties:before { background-position: -364px 0px; }
+.mwInput .subcontrol.button.properties.blank:before { background-position: -364px -56px; }
+.mwInput .subcontrol.button.properties.gray:before { background-position: -364px -28px; }
+.mwInput .subcontrol.button.hDrag:before { background-position: -392px 0px; }
+.mwInput .subcontrol.button.hDrag.blank:before { background-position: -392px -56px; }
+.mwInput .subcontrol.button.hDrag.gray:before { background-position: -392px -28px; }
+.mwInput .subcontrol.button.vDrag:before { background-position: -420px 0px; }
+.mwInput .subcontrol.button.vDrag.blank:before { background-position: -420px -56px; }
+.mwInput .subcontrol.button.vDrag.gray:before { background-position: -420px -28px; }
+.mwInput .subcontrol.button.thumbs:before { background-position: -448px 0px; }
+.mwInput .subcontrol.button.thumbs.blank:before { background-position: -448px -56px; }
+.mwInput .subcontrol.button.thumbs.gray:before { background-position: -448px -28px; }
+.mwInput .subcontrol.button.details:before { background-position: -476px 0px; }
+.mwInput .subcontrol.button.details.blank:before { background-position: -476px -56px; }
+.mwInput .subcontrol.button.details.gray:before { background-position: -476px -28px; }
+.mwInput .subcontrol.button.list:before { background-position: -504px 0px; }
+.mwInput .subcontrol.button.list.blank:before { background-position: -504px -56px; }
+.mwInput .subcontrol.button.list.gray:before { background-position: -504px -28px; }
+.mwInput .subcontrol.button.lock:before { background-position: -532px 0px; }
+.mwInput .subcontrol.button.lock.blank:before { background-position: -532px -56px; }
+.mwInput .subcontrol.button.lock.gray:before { background-position: -532px -28px; }
+.mwInput .subcontrol.button.unlock:before { background-position: -560px 0px; }
+.mwInput .subcontrol.button.unlock.blank:before { background-position: -560px -56px; }
+.mwInput .subcontrol.button.unlock.gray:before { background-position: -560px -28px; }
+.mwInput .subcontrol.button.date:before { background-position: -588px 0px; }
+.mwInput .subcontrol.button.date.blank:before { background-position: -588px -56px; }
+.mwInput .subcontrol.button.date.gray:before { background-position: -588px -28px; }
+.mwInput .subcontrol.button.time:before { background-position: -616px 0px; }
+.mwInput .subcontrol.button.time.blank:before { background-position: -616px -56px; }
+.mwInput .subcontrol.button.time.gray:before { background-position: -616px -28px; }
+
+.mwInput .subcontrol.button {
+	position		: absolute;
+	border-left		: 1px solid #DEDEDE;
+	color			: white;
+	background		: #AAAAAA;
+} 
+
+.mwInput .subcontrol.button.hi {
+	border-left		: 1px solid #DEDEDE;
+	color			: white;
+	background		: #2EB7A0;
+} 
+
+/* ---- Specials ---- */
+
+.mwInput.pointer,
+.mwInput.pointer * {
+	cursor			: pointer; 
+}
+
+/* Used to blend input with text */
+.mwDialog.flat .mwInput, 
+.mwInput.flat
+{
+	border-color		: transparent;
+	padding			: 0px;
+	color			: black;
+}
+
+/* Defining here for code completion feature, or mb some additional styling */
+.mwInput.defaultInput {
+	
+}
+
+/* ---- HTML Override ---- */
+
+.mwInput TEXTAREA,
+.mwInput SELECT,
+.mwInput input[type="file"],
+.mwInput input[type="text"],
+.mwInput input[type="search"],
+.mwInput input[type="password"],
+.mwInput input[type="email"],
+.mwInput input[type="date"],
+.mwInput input[type="number"],
+.mwInput input[type="tel"],
+.mwInput input[type="url"],
+.mwInput input[type="button"],
+.mwInput input[type="submit"],
+.mwInput .Value {
+	border			: none;
+	background-color	: transparent;
+	
+	width			: 100%;
+	
+	padding			: 0px;
+	margin			: 0px;
+	
+	color			: inherit;
+} 
+
+/* Making hidden inputs to fit parent control, and overflow other elements */
+.mwHiddenInput,
+.mwInput .hidden,
+.mwInput input[type="checkbox"],
+.mwInput input[type="radio"],
+.mwInput input[type="file"] {
+	position		: absolute;
+	top			: 0px;
+	right			: 0px;
+	bottom			: 0px;
+	left			: 0px;
+	
+	padding			: 0px;
+	margin			: 0px;
+	
+	height			: 100%;
+	width			: 100%;
+
+	cursor			: pointer;
+	
+/* Debug tool. Switch comment, to outline hiddent inputs */
+/*/
+	outline			: 1px black solid;	
+/*/
+	opacity			: 0;
+	filter			: alpha(opacity=0);
+	-moz-opacity		: 0;
+/**/
+	
+}
+
+/* ---- TEXT ---------------------------------------------------------------------------------------------------------------- */
+
+.mwInput.text input[type="text"],
+.mwInput.text input[type="search"],
+.mwInput.text input[type="password"],
+.mwInput.text input[type="email"],
+.mwInput.text input[type="date"],
+.mwInput.text input[type="number"],
+.mwInput.text input[type="tel"],
+.mwInput.text input[type="url"] {
+	line-height		: 30px;
+}
+
+.mwInput.text {
+	min-height		: 32px;	
+}
+
+.mwInput.text.wSub {
+	padding-right		: 40px;
+}
+
+
+/*
+.mwInput.text.plus .subcontrol>div {
+	background-image	: url('/cms3t/res/images/forms/plus4.png');
+}
+
+.mwInput.text.go .subcontrol>div {
+	background-image	: url('/cms3t/res/images/forms/Checked.png');
+}
+*/
+
+/* DATE / TIME / Nums */
+
+.mwInput.num,
+.mwInput.num>input, 
+.mwInput.date,
+.mwInput.date>input, 
+.mwInput.time,
+.mwInput.time>SELECT,
+.mwInput.time>input
+{
+	text-align: center;
+}
+
+/* ---- Textarea ---- */
+
+/* Paddings for textarea and selects are managed inside inputs */
+.mwInput.textarea {
+/*	height			: 112px; */
+	padding			: 0px;
+}
+
+.mwInput.textarea textarea {
+	padding			: 8px;
+	height			: 100%;
+	resize			: none;
+}
+
+/* ---- richEdit ---- */
+
+.mwInput.richEdit {
+	height			: 192px;
+	padding			: 0px; 
+}
+
+textarea.richEdit {
+	height			: 192px;
+/*	margin			: 4px 4px; */ 
+}
+
+/*/
+.mwInput.richEdit textarea {
+	height			: 192px;
+	resize			: none;
+}
+/**/
+/* ---- CHECKBOX ------------------------------------------------------------------------------------------------------------ */
+
+/* Default checkbox is square, custom ones set speciefic widths */
+.mwInput.checkbox {
+	display			: inline-block; 
+	width			: 32px;
+	height			: 32px;
+	padding			: 0px;
+	
+	overflow		: visible;
+}
+
+.mwInput.checkbox div {
+
+	height			: 30px;
+	line-height		: 30px;
+
+	padding			: 0px 8px 0px 35px; 
+
+	text-align		: left;
+	white-space		: nowrap;
+}
+
+/* Chekcbox input does not have border. Instead border is around icon */
+
+
+.mwInput.checkbox {
+	border-color		: transparent; 
+}
+
+.mwInput.checkbox:before {
+	content			: '';
+	display			: block;
+	position		: absolute;
+	left			: -1px;
+	top			: 2px;
+	
+	width			: 26px;
+	height			: 26px;
+	
+	border			: 1px solid #DEDEDE; 
+}
+
+.mwInput.checkbox div:before {
+	margin-left		: -2px !important;
+}
+
+
+.mwInput.checkbox.custom,
+.mwInput.checkbox.full {
+	display			: block;
+	width			: auto; 
+}
+
+.mwInput.checkbox.of,
+.mwInput.checkbox.yn,
+.mwInput.checkbox.inline {
+	display			: inline-block;
+	width			: auto; 
+}
+
+.mwInput.checkbox.of div,
+.mwInput.checkbox.yn div {
+	width			: 80px;  
+}
+
+.mwInput.checkbox.of div:after {
+	content			: 'OFF';
+}
+
+.mwInput.checkbox.of.checked div:after {
+	content			: 'ON';
+}
+
+.mwInput.checkbox.yn div:after {
+	content			: 'NO';
+}
+
+.mwInput.checkbox.yn.checked div:after {
+	content			: 'YES';
+}
+
+/* ---- SELECT -------------------------------------------------------------------------------------------------------------- */
+
+.mwInput.select {
+	overflow		: hidden; 	
+}
+
+.mwInput.select select {
+	width			: 100%;
+}
+
+.mwInput.select.new select {
+	height			: 100%;	
+}
+
+.mwInput.select div {
+	height			: 30px;
+	line-height		: 30px;
+}
+
+/* ---- Multiline ---- */
+
+.mwInput.multiple {
+	height			: 112px;
+	padding			: 0px;
+}
+
+.mwInput.multiple select {
+	padding			: 8px;
+	height			: 100%;
+}
+
+/* ---- Lists ---- */
+
+.mwInput.radioList,
+.mwInput.checkList,
+.mwInput.list {
+	padding			: 0px;
+	position		: relative;
+	overflow		: auto;
+}
+
+.mwInput.list .subInput {
+
+	position		: relative;
+
+	width			: auto;
+
+	clear			: none;
+	float			: none;
+	overflow		: hidden;
+}
+
+.mwInput.list .subInput input
+{
+	display			: block;
+
+	width			: 100%;
+	height			: 30px;
+	line-height		: 30px;
+}
+
+.mwInput.list .subInput input[readonly] 
+{
+	cursor			: pointer;
+}
+
+.mwInput.list .subcontrol.right {
+	position		: relative;
+	float			: right;
+}
+
+.mwInput.list .subcontrol.left {
+	position		: relative;
+	float			: left;
+}
+
+
+.mwInput.list .face {
+	padding-left		: 8px;
+}
+
+/* Value input used to display selected value, filter list or type in custom value. Depends on setup */
+/* Face (value container) is not displayed for multiline inputs */
+.mwInput.list.multiline .face
+{
+	display			: none; 
+}
+
+.mwInput.list .filter
+{
+	display			: block;
+	border-bottom		: 1px solid #DEDEDE;
+}
+
+.mwInput.list .filter .add {
+	display			: none;
+}
+
+.mwInput.list .filter .delete {
+	display			: none; 
+}
+
+.mwInput.list .body {
+	transition		: none;
+}
+
+.mwInput.list .body.multiline
+{
+	overflow		: hidden;
+	width			: 100%;
+	height			: 100%;
+}
+
+/* Body is hidden in inline elements by default */
+.mwInput.list .body.oneline
+{
+	display			: none; 
+
+	position		: fixed;
+	top			: 0;
+	
+	width			: 200px;
+/*	height			: 400px; */
+	
+	padding			: 0px;
+	margin			: 0px;
+
+/*/
+	background		: white;
+	border			: 1px black solid;
+/**/
+	z-index			: 5000;
+	box-shadow		: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.mwInput.list .list
+{
+	position		: absolute;
+	top			: 0;
+	bottom			: 0;
+	left			: 0;
+	right			: 0;
+
+	padding			: 0px;
+/*	padding-right		: 8px; */ 
+/*/
+	padding-top		: 2px;
+	padding-left		: 0px;
+/**/ 
+	overflow		: auto;
+	height			: auto;
+}
+
+/* Leaving space for filter, if used */
+.mwInput.list.filter .list
+{
+	top			: 31px;
+}
+
+/* Different behavior inside inline body */
+.mwInput.list .body.oneline .list
+{
+	position	: static;
+	height		: 100%;
+	max-height	: 500px;
+}
+
+.mwInput.list .item
+{
+	position		: relative;
+
+	height			: 30px;
+	line-height		: 30px;
+
+	padding-left		: 30px;
+
+	overflow		: hidden; 
+	cursor			: pointer;
+	transition		: height 200ms ease-in-out 0ms;
+}
+
+.mwInput.list .item.Focus,
+.mwInput.list .item:hover
+{
+	color			: #2EB7A0;
+}
+
+.mwInput.list .item.selected
+{
+	color			: #2EB7A0;
+}
+
+.mwInput.list .item.declined
+{
+	color			: #FF0000;
+}
+
+.mwInput.list .item .title
+{
+}
+
+.mwInput.list .item.icon { position: relative; }
+.mwInput.list .item.icon:before { content: ''; display: block; width: 28px; height: 28px; margin: 1px; position: absolute; top: 50%; margin-top: -14px; pointer-events: none; background: url('/cms3t/res/images/dialogs/icons.28x.png') no-repeat transparent; background-position: 28px 0px; }
+.mwInput.list .item.icon.left:before { left: 0; right: auto; margin-left: 1px; margin-right: 0px; }
+.mwInput.list .item.icon:before, .mwInput.list .item.icon.center:before { left: 50%; right: auto; margin-left: -14px; margin-right: 0px; }
+.mwInput.list .item.icon.right:before { left: auto; right: 0; margin-left: 0px; margin-right: 1px; }
+.mwInput.list .item.icon.selected:before { background-position: -0px -28px; }
+.mwInput.list .item.icon.selected.hi:before { background-position: -0px -56px; }
+.mwInput.list .item.icon.selected.focus:before { background-position: -0px -56px; }
+.mwInput.list .item.icon.selected.hover:before { background-position: -0px -56px; }
+.mwInput.list .item.icon.selected.hi.hover:before { background-position: -0px -28px; }
+.mwInput.list .item.icon.declined:before { background-position: -28px -28px; }
+.mwInput.list .item.icon.declined.hi:before { background-position: -28px -56px; }
+.mwInput.list .item.icon.declined.focus:before { background-position: -28px -56px; }
+.mwInput.list .item.icon.declined.hover:before { background-position: -28px -56px; }
+.mwInput.list .item.icon.declined.hi.hover:before { background-position: -28px -28px; }
+.mwInput.list .item.icon.delete:before { background-position: -56px -28px; }
+.mwInput.list .item.icon.delete.hi:before { background-position: -56px -56px; }
+.mwInput.list .item.icon.delete.focus:before { background-position: -56px -56px; }
+.mwInput.list .item.icon.delete.hover:before { background-position: -56px -56px; }
+.mwInput.list .item.icon.delete.hi.hover:before { background-position: -56px -28px; }
+.mwInput.list .item.icon.dropdown:before { background-position: -84px -28px; }
+.mwInput.list .item.icon.dropdown.hi:before { background-position: -84px -56px; }
+.mwInput.list .item.icon.dropdown.focus:before { background-position: -84px -56px; }
+.mwInput.list .item.icon.dropdown.hover:before { background-position: -84px -56px; }
+.mwInput.list .item.icon.dropdown.hi.hover:before { background-position: -84px -28px; }
+.mwInput.list .item.icon.expand:before { background-position: -112px -28px; }
+.mwInput.list .item.icon.expand.hi:before { background-position: -112px -56px; }
+.mwInput.list .item.icon.expand.focus:before { background-position: -112px -56px; }
+.mwInput.list .item.icon.expand.hover:before { background-position: -112px -56px; }
+.mwInput.list .item.icon.expand.hi.hover:before { background-position: -112px -28px; }
+.mwInput.list .item.icon.collapse:before { background-position: -140px -28px; }
+.mwInput.list .item.icon.collapse.hi:before { background-position: -140px -56px; }
+.mwInput.list .item.icon.collapse.focus:before { background-position: -140px -56px; }
+.mwInput.list .item.icon.collapse.hover:before { background-position: -140px -56px; }
+.mwInput.list .item.icon.collapse.hi.hover:before { background-position: -140px -28px; }
+.mwInput.list .item.icon.plus:before { background-position: -168px -28px; }
+.mwInput.list .item.icon.plus.hi:before { background-position: -168px -56px; }
+.mwInput.list .item.icon.plus.focus:before { background-position: -168px -56px; }
+.mwInput.list .item.icon.plus.hover:before { background-position: -168px -56px; }
+.mwInput.list .item.icon.plus.hi.hover:before { background-position: -168px -28px; }
+.mwInput.list .item.icon.ok:before { background-position: -196px -28px; }
+.mwInput.list .item.icon.ok.hi:before { background-position: -196px -56px; }
+.mwInput.list .item.icon.ok.focus:before { background-position: -196px -56px; }
+.mwInput.list .item.icon.ok.hover:before { background-position: -196px -56px; }
+.mwInput.list .item.icon.ok.hi.hover:before { background-position: -196px -28px; }
+.mwInput.list .item.icon.upload:before { background-position: -224px -28px; }
+.mwInput.list .item.icon.upload.hi:before { background-position: -224px -56px; }
+.mwInput.list .item.icon.upload.focus:before { background-position: -224px -56px; }
+.mwInput.list .item.icon.upload.hover:before { background-position: -224px -56px; }
+.mwInput.list .item.icon.upload.hi.hover:before { background-position: -224px -28px; }
+.mwInput.list .item.icon.download:before { background-position: -252px -28px; }
+.mwInput.list .item.icon.download.hi:before { background-position: -252px -56px; }
+.mwInput.list .item.icon.download.focus:before { background-position: -252px -56px; }
+.mwInput.list .item.icon.download.hover:before { background-position: -252px -56px; }
+.mwInput.list .item.icon.download.hi.hover:before { background-position: -252px -28px; }
+.mwInput.list .item.icon.search:before { background-position: -280px -28px; }
+.mwInput.list .item.icon.search.hi:before { background-position: -280px -56px; }
+.mwInput.list .item.icon.search.focus:before { background-position: -280px -56px; }
+.mwInput.list .item.icon.search.hover:before { background-position: -280px -56px; }
+.mwInput.list .item.icon.search.hi.hover:before { background-position: -280px -28px; }
+.mwInput.list .item.icon.edit:before { background-position: -308px -28px; }
+.mwInput.list .item.icon.edit.hi:before { background-position: -308px -56px; }
+.mwInput.list .item.icon.edit.focus:before { background-position: -308px -56px; }
+.mwInput.list .item.icon.edit.hover:before { background-position: -308px -56px; }
+.mwInput.list .item.icon.edit.hi.hover:before { background-position: -308px -28px; }
+.mwInput.list .item.icon.more:before { background-position: -336px -28px; }
+.mwInput.list .item.icon.more.hi:before { background-position: -336px -56px; }
+.mwInput.list .item.icon.more.focus:before { background-position: -336px -56px; }
+.mwInput.list .item.icon.more.hover:before { background-position: -336px -56px; }
+.mwInput.list .item.icon.more.hi.hover:before { background-position: -336px -28px; }
+.mwInput.list .item.icon.properties:before { background-position: -364px -28px; }
+.mwInput.list .item.icon.properties.hi:before { background-position: -364px -56px; }
+.mwInput.list .item.icon.properties.focus:before { background-position: -364px -56px; }
+.mwInput.list .item.icon.properties.hover:before { background-position: -364px -56px; }
+.mwInput.list .item.icon.properties.hi.hover:before { background-position: -364px -28px; }
+.mwInput.list .item.icon.hDrag:before { background-position: -392px -28px; }
+.mwInput.list .item.icon.hDrag.hi:before { background-position: -392px -56px; }
+.mwInput.list .item.icon.hDrag.focus:before { background-position: -392px -56px; }
+.mwInput.list .item.icon.hDrag.hover:before { background-position: -392px -56px; }
+.mwInput.list .item.icon.hDrag.hi.hover:before { background-position: -392px -28px; }
+.mwInput.list .item.icon.vDrag:before { background-position: -420px -28px; }
+.mwInput.list .item.icon.vDrag.hi:before { background-position: -420px -56px; }
+.mwInput.list .item.icon.vDrag.focus:before { background-position: -420px -56px; }
+.mwInput.list .item.icon.vDrag.hover:before { background-position: -420px -56px; }
+.mwInput.list .item.icon.vDrag.hi.hover:before { background-position: -420px -28px; }
+.mwInput.list .item.icon.thumbs:before { background-position: -448px -28px; }
+.mwInput.list .item.icon.thumbs.hi:before { background-position: -448px -56px; }
+.mwInput.list .item.icon.thumbs.focus:before { background-position: -448px -56px; }
+.mwInput.list .item.icon.thumbs.hover:before { background-position: -448px -56px; }
+.mwInput.list .item.icon.thumbs.hi.hover:before { background-position: -448px -28px; }
+.mwInput.list .item.icon.details:before { background-position: -476px -28px; }
+.mwInput.list .item.icon.details.hi:before { background-position: -476px -56px; }
+.mwInput.list .item.icon.details.focus:before { background-position: -476px -56px; }
+.mwInput.list .item.icon.details.hover:before { background-position: -476px -56px; }
+.mwInput.list .item.icon.details.hi.hover:before { background-position: -476px -28px; }
+.mwInput.list .item.icon.list:before { background-position: -504px -28px; }
+.mwInput.list .item.icon.list.hi:before { background-position: -504px -56px; }
+.mwInput.list .item.icon.list.focus:before { background-position: -504px -56px; }
+.mwInput.list .item.icon.list.hover:before { background-position: -504px -56px; }
+.mwInput.list .item.icon.list.hi.hover:before { background-position: -504px -28px; }
+.mwInput.list .item.icon.lock:before { background-position: -532px -28px; }
+.mwInput.list .item.icon.lock.hi:before { background-position: -532px -56px; }
+.mwInput.list .item.icon.lock.focus:before { background-position: -532px -56px; }
+.mwInput.list .item.icon.lock.hover:before { background-position: -532px -56px; }
+.mwInput.list .item.icon.lock.hi.hover:before { background-position: -532px -28px; }
+.mwInput.list .item.icon.unlock:before { background-position: -560px -28px; }
+.mwInput.list .item.icon.unlock.hi:before { background-position: -560px -56px; }
+.mwInput.list .item.icon.unlock.focus:before { background-position: -560px -56px; }
+.mwInput.list .item.icon.unlock.hover:before { background-position: -560px -56px; }
+.mwInput.list .item.icon.unlock.hi.hover:before { background-position: -560px -28px; }
+.mwInput.list .item.icon.date:before { background-position: -588px -28px; }
+.mwInput.list .item.icon.date.hi:before { background-position: -588px -56px; }
+.mwInput.list .item.icon.date.focus:before { background-position: -588px -56px; }
+.mwInput.list .item.icon.date.hover:before { background-position: -588px -56px; }
+.mwInput.list .item.icon.date.hi.hover:before { background-position: -588px -28px; }
+.mwInput.list .item.icon.time:before { background-position: -616px -28px; }
+.mwInput.list .item.icon.time.hi:before { background-position: -616px -56px; }
+.mwInput.list .item.icon.time.focus:before { background-position: -616px -56px; }
+.mwInput.list .item.icon.time.hover:before { background-position: -616px -56px; }
+.mwInput.list .item.icon.time.hi.hover:before { background-position: -616px -28px; }
+
+.mwInput.list .item .col {
+	float			: right;
+}
+
+/* ---- Grouped lists ---- */
+
+.mwInput.list .itemsGroup
+{
+	padding-left		: 30px;
+}
+
+.mwInput.list .item.head
+{
+	position		: relative;
+
+	height			: 30px;
+	line-height		: 30px;
+
+	padding-left		: 30px;
+
+	font-weight		: bold;
+	
+	border-bottom		: 1px solid #DEDEDE; 
+
+	overflow		: visible;
+
+}
+
+.mwInput.list .item .groupButton 
+{
+	float			: left;
+	
+	width			: 30px;
+	height			: 30px;
+	
+	margin-left		: -60px;
+
+	border-bottom		: 1px solid #DEDEDE; 
+}
+
+.mwInput.list .collapsed .subItem
+{
+	height			: 0px;
+}
+
+.mwInputOverlay
+{
+	display			: none;
+	
+	position		: fixed !important;
+	top			: 0;
+	bottom			: 0;
+	left			: 0;
+	right			: 0;
+	
+	margin			: 0px;
+	padding			: 0px;
+	
+	background		: rgba(0, 0, 0, 0.1);
+	border			: none;
+	
+	z-index			: 4000;
+
+	opacity			: 0;
+	transition		: opacity 200ms ease-in-out 0ms;
+
+}
+
+/* When list is inside overlay - it's visible */
+.mwInputOverlay .body.oneline
+{
+	display			: block !important;
+/*	transform		: translateY(-50%) scaleY(0.02); */
+	transform		: scaleY(0.04); 
+	transition		: transform 200ms ease-in-out 0ms, color 200ms ease-in-out 0ms, border 200ms ease-in-out 0ms;
+}
+
+.mwInputOverlay .body.oneline.show
+{
+	display			: block !important;
+ 	transform		: scaleY(1); 
+}
+
+
+.mwInputOverlay.show {
+	opacity			: 1;
+}
+
+/* Not using blur currently, since it brakes z-index, but leaving here as fun experiment */
+body.overlayed>*:not(.mwInputOverlay, script) {
+	filter			: blur(2px);	
+}
+
+/* ---- FILE ---------------------------------------------------------------------------------------------------------------- */
+
+.mwInput.file {
+	position		: relative;
+	height			: 32px;
+	padding			: 0;
+	padding-right		: 30px;
+	overflow		: hidden;
+	cursor			: pointer;
+}
+
+input.mwHiddenInput[type=file],
+.mwInput.file input[type=file] {
+/*/	font-size		: 33px; /**/
+} 
+
+.mwInput.file .fill {
+	display			: none;
+	position		: relative;
+	left			: 0;
+	
+	float			: left;
+	
+	border			: none;
+	background-color	: #79D3C4;
+
+	width			: 0%;
+	height			: 100%; 
+} 
+
+.mwInput.file .fileName {
+	position		: absolute;
+	padding			: 0px 8px;
+	line-height		: 30px;
+	cursor			: pointer;
+} 
+
+.mwInput.file .subcontrol {
+}
+/*
+.mwInput.file .subcontrol div {
+	background-image	: url('/cms3t/res/images/forms/upload.png');
+}
+*/
+.mwInput.file .num {
+	position		: absolute;
+	right			: 38px;
+	top			: 0px;
+
+	height			: 30px; 
+	line-height		: 30px; 
+
+	font-size		: 16px;
+	color			: black;
+/*	text-shadow		: 0px 0px 2px white; */
+} 
+
+
+.mwInput.file .fill {
+	transition		: width 0.5s linear;
+}
+
+
+/* ---- BUTTONS ------------------------------------------------------------------------------------------------------------- */
+
+.mwInput.button {
+	display			: inline-block;
+	position		: relative;
+	padding			: 0px;
+
+	cursor			: pointer;
+
+	transition		: all 0.2s;
+
+}
+
+.mwInput.button button,
+.mwInput.button input[type="button"],
+.mwInput.button input[type="submit"] {
+	height			: 30px;
+	padding			: 0px 8px;
+
+	vertical-align		: middle;
+	text-align		: center;
+
+	border			: none;
+	background		: none;
+
+	color			: inherit;
+	font-size		: inherit;
+	font-family		: inherit;
+
+	cursor			: pointer;
+}
+
+.mwInput.button input[type='image'] {
+	cursor			: pointer;
+	margin			: 2px -3px;
+}
+
+/*/
+.mwInput.button button {
+	border			: none;
+	background		: none; 
+}
+/**/
+A.mwInput.button {
+	display			: inline-block;
+
+	height			: 32px;
+	line-height		: 30px;
+	padding			: 0px 8px;
+
+	vertical-align		: middle;
+	text-align		: center;
+
+	text-decoration		: none;
+	cursor			: pointer;
+}
+
+/* Borders and colors */
+.mwInput.button 
+{
+	border-color		: #AAAAAA; 
+	color			: white;
+	background		: #AAAAAA; 
+}
+/*/
+.mwInput.button button {
+	color			: white;
+} 
+/**/
+.mwInput.button.hi 
+{
+	border-color		: #2EB7A0; 
+	color			: white;
+	background		: #2EB7A0; 
+}
+/*/
+.mwInput.button.hi button {
+	color			: white;
+} 
+/**/
+.mwInput.button.red 
+{
+	border-color		: #E90000; 
+	color			: white;
+	background		: #E90000; 
+}
+/*/
+.mwInput.button.red button {
+	color			: white;
+} 
+/**/
+.mwInput.button.hover 
+{
+	border-color		: #808080; 
+	color			: white;
+	background		: #808080; 
+}
+/*/
+.mwInput.button.hover button {
+	color			: white;
+} 
+/**/
+.mwInput.button.active 
+{
+	border-color		: black; 
+	color			: white;
+	background		: black; 
+}
+/*/
+.mwInput.button.active button {
+	color			: white;
+} 
+/**/
+.mwInput.button.blank 
+{
+	border-color		: #DEDEDE; 
+	color			: gray;
+	background		: #FFFFFF; 
+}
+/*/
+.mwInput.button.blank button {
+	color			: gray;
+} 
+/**/
+.mwInput.button.disabled 
+{
+	border-color		: #DEDEDE; 
+	color			: silver;
+	background		: #FFFFFF; 
+}
+/*/
+.mwInput.button.disabled button {
+	color			: silver;
+} 
+/**/
+.mwInput.button.link 
+{
+	border-color		: transparent; 
+	color			: #2EB7A0;
+	background		: #FFFFFF; 
+}
+/*/
+.mwInput.button.link button {
+	color			: #2EB7A0;
+} 
+/**/
+
+/*/
+.mwDialog.flat .mwInput, 
+.mwInput.flat
+{
+	border-color		: transparent;
+	padding			: 0px;
+	color			: black;
+}
+/**/
+/* Special case for link button */
+.mwInput.button.link:hover {
+	text-decoration		: underline;
+} 
+
+.mwDialog.wide .mwInput.button.link {
+	text-align		: left;
+}
+
+/* Icons */
+
+.mwInput.button.icon {
+	width			: 32px;
+	height			: 32px;
+	line-height		: 28px;
+	text-align		: center;
+}
+
+.mwInput.button.icon input {
+	display			: block;
+	width			: 30px;
+	height			: 30px;
+	padding			: 0px;
+	margin			: 0px;
+}
+
+.mwInput.button.icon { position: relative; }
+.mwInput.button.icon:before { content: ''; display: block; width: 28px; height: 28px; margin: 0px; position: absolute; top: 50%; margin-top: -14px; pointer-events: none; background: url('/cms3t/res/images/dialogs/icons.28x.png') no-repeat transparent; background-position: 28px 0px; }
+.mwInput.button.icon.left:before { left: 0; right: auto; margin-left: 0px; margin-right: 0px; }
+.mwInput.button.icon:before, .mwInput.button.icon.center:before { left: 50%; right: auto; margin-left: -14px; margin-right: 0px; }
+.mwInput.button.icon.right:before { left: auto; right: 0; margin-left: 0px; margin-right: 0px; }
+.mwInput.button.icon.selected:before { background-position: -0px 0px; }
+.mwInput.button.icon.selected.blank:before { background-position: -0px -56px; }
+.mwInput.button.icon.selected.gray:before { background-position: -0px -28px; }
+.mwInput.button.icon.declined:before { background-position: -28px 0px; }
+.mwInput.button.icon.declined.blank:before { background-position: -28px -56px; }
+.mwInput.button.icon.declined.gray:before { background-position: -28px -28px; }
+.mwInput.button.icon.delete:before { background-position: -56px 0px; }
+.mwInput.button.icon.delete.blank:before { background-position: -56px -56px; }
+.mwInput.button.icon.delete.gray:before { background-position: -56px -28px; }
+.mwInput.button.icon.dropdown:before { background-position: -84px 0px; }
+.mwInput.button.icon.dropdown.blank:before { background-position: -84px -56px; }
+.mwInput.button.icon.dropdown.gray:before { background-position: -84px -28px; }
+.mwInput.button.icon.expand:before { background-position: -112px 0px; }
+.mwInput.button.icon.expand.blank:before { background-position: -112px -56px; }
+.mwInput.button.icon.expand.gray:before { background-position: -112px -28px; }
+.mwInput.button.icon.collapse:before { background-position: -140px 0px; }
+.mwInput.button.icon.collapse.blank:before { background-position: -140px -56px; }
+.mwInput.button.icon.collapse.gray:before { background-position: -140px -28px; }
+.mwInput.button.icon.plus:before { background-position: -168px 0px; }
+.mwInput.button.icon.plus.blank:before { background-position: -168px -56px; }
+.mwInput.button.icon.plus.gray:before { background-position: -168px -28px; }
+.mwInput.button.icon.ok:before { background-position: -196px 0px; }
+.mwInput.button.icon.ok.blank:before { background-position: -196px -56px; }
+.mwInput.button.icon.ok.gray:before { background-position: -196px -28px; }
+.mwInput.button.icon.upload:before { background-position: -224px 0px; }
+.mwInput.button.icon.upload.blank:before { background-position: -224px -56px; }
+.mwInput.button.icon.upload.gray:before { background-position: -224px -28px; }
+.mwInput.button.icon.download:before { background-position: -252px 0px; }
+.mwInput.button.icon.download.blank:before { background-position: -252px -56px; }
+.mwInput.button.icon.download.gray:before { background-position: -252px -28px; }
+.mwInput.button.icon.search:before { background-position: -280px 0px; }
+.mwInput.button.icon.search.blank:before { background-position: -280px -56px; }
+.mwInput.button.icon.search.gray:before { background-position: -280px -28px; }
+.mwInput.button.icon.edit:before { background-position: -308px 0px; }
+.mwInput.button.icon.edit.blank:before { background-position: -308px -56px; }
+.mwInput.button.icon.edit.gray:before { background-position: -308px -28px; }
+.mwInput.button.icon.more:before { background-position: -336px 0px; }
+.mwInput.button.icon.more.blank:before { background-position: -336px -56px; }
+.mwInput.button.icon.more.gray:before { background-position: -336px -28px; }
+.mwInput.button.icon.properties:before { background-position: -364px 0px; }
+.mwInput.button.icon.properties.blank:before { background-position: -364px -56px; }
+.mwInput.button.icon.properties.gray:before { background-position: -364px -28px; }
+.mwInput.button.icon.hDrag:before { background-position: -392px 0px; }
+.mwInput.button.icon.hDrag.blank:before { background-position: -392px -56px; }
+.mwInput.button.icon.hDrag.gray:before { background-position: -392px -28px; }
+.mwInput.button.icon.vDrag:before { background-position: -420px 0px; }
+.mwInput.button.icon.vDrag.blank:before { background-position: -420px -56px; }
+.mwInput.button.icon.vDrag.gray:before { background-position: -420px -28px; }
+.mwInput.button.icon.thumbs:before { background-position: -448px 0px; }
+.mwInput.button.icon.thumbs.blank:before { background-position: -448px -56px; }
+.mwInput.button.icon.thumbs.gray:before { background-position: -448px -28px; }
+.mwInput.button.icon.details:before { background-position: -476px 0px; }
+.mwInput.button.icon.details.blank:before { background-position: -476px -56px; }
+.mwInput.button.icon.details.gray:before { background-position: -476px -28px; }
+.mwInput.button.icon.list:before { background-position: -504px 0px; }
+.mwInput.button.icon.list.blank:before { background-position: -504px -56px; }
+.mwInput.button.icon.list.gray:before { background-position: -504px -28px; }
+.mwInput.button.icon.lock:before { background-position: -532px 0px; }
+.mwInput.button.icon.lock.blank:before { background-position: -532px -56px; }
+.mwInput.button.icon.lock.gray:before { background-position: -532px -28px; }
+.mwInput.button.icon.unlock:before { background-position: -560px 0px; }
+.mwInput.button.icon.unlock.blank:before { background-position: -560px -56px; }
+.mwInput.button.icon.unlock.gray:before { background-position: -560px -28px; }
+.mwInput.button.icon.date:before { background-position: -588px 0px; }
+.mwInput.button.icon.date.blank:before { background-position: -588px -56px; }
+.mwInput.button.icon.date.gray:before { background-position: -588px -28px; }
+.mwInput.button.icon.time:before { background-position: -616px 0px; }
+.mwInput.button.icon.time.blank:before { background-position: -616px -56px; }
+.mwInput.button.icon.time.gray:before { background-position: -616px -28px; }
+
+/* Images */
+
+.mwInput.button.image {
+	min-height		: 32px;
+}
+
+.mwInput.button.image input {
+	width			: auto;
+	height			: auto;
+	display			: inline-block;
+	padding			: 0px;
+	margin			: 0px;
+	vertical-align		: middle;
+}
+
+
+/* ---- MEDIA --------------------------------------------------------------------------------------------------------------- */
+
+/* Just temporary solutions till full media input is properly implemented */
+
+.mwInput.image .mwInput.file {
+	border-left		: none;
+	margin-left		: 0px;		
+}
+
+.mwInput.image .mwInput.button {
+	border-right		: none;
+	margin-right		: 0px;		
+}
+
+/* ---- Tabs ---------------------------------------------------------------------------------------------------------------- */
+
+table.mwWinTabs {
+	border-spacing		: 0px;
+	border-collapse		: collapse; 
+	width			: calc(100% - 8px);		
+	margin			: 4px 4px; 
+/*	margin			: 0px; */ 
+}
+
+table.mwWinTabs.nopads {
+	border-spacing		: 0px;
+	margin			: 0px;
+	width			: 100%;
+}
+
+table.mwWinTabs.even {
+	width			: auto;
+	margin			: auto;
+}
+
+.mwWinTabs TD {
+	padding			: 5px 20px;
+
+	line-height		: 20px;
+
+	text-align		: center;
+	vertical-align		: middle;
+	
+	font-family		: 'Open Sans', sans-serif;
+	font-size		: 14px;
+	font-weight		: normal;
+	font-style		: normal;
+	
+	color			: gray;
+	
+	background		: #FFFFFF;
+	
+	cursor			: pointer;
+}
+
+.mwWinTabs TD {
+	border			: 1px solid #DEDEDE;
+}
+
+
+table.mwWinTabs.even TD:first-child:nth-last-child(1), table.mwWinTabs.even TD:first-child:nth-last-child(1) ~ TD { width : 100% !important; }
+table.mwWinTabs.even TD:first-child:nth-last-child(2), table.mwWinTabs.even TD:first-child:nth-last-child(2) ~ TD { width : 50% !important; }
+table.mwWinTabs.even TD:first-child:nth-last-child(3), table.mwWinTabs.even TD:first-child:nth-last-child(3) ~ TD { width : 33.33% !important; }
+table.mwWinTabs.even TD:first-child:nth-last-child(4), table.mwWinTabs.even TD:first-child:nth-last-child(4) ~ TD { width : 25% !important; }
+table.mwWinTabs.even TD:first-child:nth-last-child(5), table.mwWinTabs.even TD:first-child:nth-last-child(5) ~ TD { width : 20% !important; }
+table.mwWinTabs.even TD:first-child:nth-last-child(6), table.mwWinTabs.even TD:first-child:nth-last-child(6) ~ TD { width : 16.66% !important; }
+table.mwWinTabs.even TD:first-child:nth-last-child(7), table.mwWinTabs.even TD:first-child:nth-last-child(7) ~ TD { width : 14.28% !important; }
+table.mwWinTabs.even TD:first-child:nth-last-child(8), table.mwWinTabs.even TD:first-child:nth-last-child(8) ~ TD { width : 12.5% !important; }
+table.mwWinTabs.even TD:first-child:nth-last-child(9), table.mwWinTabs.even TD:first-child:nth-last-child(9) ~ TD { width : 11.11% !important; }
+table.mwWinTabs.even TD:first-child:nth-last-child(10), table.mwWinTabs.even TD:first-child:nth-last-child(10) ~ TD { width : 10% !important; }
+
+/* Header like style for main tabs */
+.mwWindow .winHeader+.winContent.nopads>table.mwWinTabs {
+	margin			: 0px;
+	width			: 100%;
+}
+
+.mwWindow .winHeader+.winContent.nopads>table.mwWinTabs TD {
+	padding			: 11px 20px;
+	text-align		: left;
+}
+
+.mwWinTabs TD:hover {
+	color			: #2EB7A0;
+	background		: #FFFFFF;
+	border-color		: #DEDEDE;
+}
+
+.mwWinTabs TD.Selected,
+.mwWinTabs TD.Selected:hover	/* Hover over already selected have no reason */
+{
+	color			: #2EB7A0;
+	background		: #FFFFFF;
+	border-color		: #DEDEDE; 
+}
+
+.mwWinTabs TD.Selected {
+/*	position		: relative; */ 
+}
+
+/*/
+.mwWinTabs TD.Selected:before {
+	content			: '';
+	position		: absolute;
+	
+	bottom			: -11px;
+	left			: 11px;
+	
+	border			: 5px solid transparent;
+	border-right-color	: #DEDEDE;
+	
+}
+
+.mwWinTabs TD.Selected:after {
+	content			: '';
+	position		: absolute;
+	
+	bottom			: -hint.border.arrowpx;
+	left			: 0px;
+	
+	border			: 0px solid transparent;
+	border-right-color	: hint.bg;
+	
+}
+/**/
+
+
+.mwWinTabs TD {
+	transition		: all 0.2s ease-in-out;
+}
+
+/* ---- Loader -------------------------------------------------------------------------------------------------------------- */
+
+.mwFormSubmitRow {
+}
+
+.mwInput.Loader {
+	display			: none;
+	height			: 32px;
+	background		: url('/res/images/loading11.gif') no-repeat center center transparent;
+	border			: none;
+}
+
+.mwFormSubmitContainer {
+	position		: relative;
+}
+
+.mwFormSubmit {
+	
+}
+
+.mwFormLoader {
+	display			: none;
+
+	position		: absolute;
+	top			: 0;
+	bottom			: 0;
+	left			: 0;
+	right			: 0;
+
+	background		: url('/res/images/loading11.gif') no-repeat center center transparent;
+}
+
+/* ---- CLOUDS -------------------------------------------------------------------------------------------------------------- */
+
+.mwDialog .Cloud {
+	width		: 100%;
+	height		: 140px;
+	border		: 1px solid black;
+	overflow	: auto;
+}
+
+.mwDialog div.CloudItem {
+	border		: 1px solid silver;
+	float		: left;
+	margin		: 2px;
+	padding		: 3px;
+}
+
+.mwDialog div.CloudItem.selected {
+	border-color	: #FF8040;
+}
+
+.mwDialog SPAN.CloudItem {
+	margin		: 5px;
+}
+
+.mwDialog SPAN.CloudItem.selected {
+	color		: #FF8000;
+}
+
+.mwDialog .CloudItem:hover {
+	background-color: silver;
+}
+
+/* ---- Complex inputs ------------------------------------------------------------------------------------------------------ */
+
+/* DIMENSIONS */
+
+/* Dimensions inuts are 2 inputs within 1 cell, with X between */
+
+
+.mwDialog .Dimensios .mwInput {
+	width			: 30%;
+	width			: calc(50% - 23.5px);
+	float			: left;
+}
+
+.mwDialog .Dimensios .mwInput:first-child {
+	margin-right		: 5.5px;
+}
+
+.mwDialog .Dimensios .mwInput:last-child {
+	margin-left		: 5.5px;
+}
+
+.mwDialog .Dimensios .mwInput:first-child:after {
+	content			: 'x';
+
+	display			: inline-block; 
+	float			: left; 
+
+	position		: absolute;
+	right			: -5.5px; 
+
+	width			: 0px;
+	height			: px;
+	line-height		: px;
+}
+
+/* ---- General geometry ---------------------------------------------------------------------------------------------------- */
+
+.mwInput.inline {
+	display			: inline-block !important; 
+}
+
+.mwInput.float {
+	display			: block !important;
+	float			: left; 
+}
+
+.mwInput.float.right {
+	display			: block !important;
+	float			: right; 
+}
+
+.mwInput.full {
+	display			: block !important; 
+}
+
+.mwInput.full.flat {
+	margin			: 0px;
+}
+
+.mwInput.block {
+	display			: block !important;
+	clear			: both; 
+}
+
+.mwInput.auto {
+	display			: block;
+	float			: none; 
+}
+
+.mwInput.maxHeight {
+	display			: block !important;
+	height			: 100%;
+}
+
+/*
+.mwInput.collapse:not(:first-child) {
+	margin-left		: -1px;
+}
+
+.mwInput.collapse:not(:last-child) {
+	margin-right		: 0px;
+}
+*/
+
+/* ---- Multiline inputs ---- */
+
+/* Should be applied only to supported inputs (like textarea or multiselect) */
+/* 
+	Crazy multiline inputs support. Rules are:
+	- All except last multiline compensate self margin
+	- Last multiline does not compensate anything
+	- Multiline after single line compensates 2 margins
+	- Last multiline after single line compensates margin for preceeding input
+*/
+		.mwInput[size="1"] { height : 32px }
+		.combo .mwInput[size="1"]:not(:last-child) { height : 41px } 
+	
+	
+		.mwInput[size="2"] { height : 72px }
+		.combo .mwInput[size="2"]:not(:last-child) { height : 81px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="2"]:not(:last-child) { height : 90px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="2"]:last-child { height : 81px }
+			  
+	
+		.mwInput[size="3"] { height : 112px }
+		.combo .mwInput[size="3"]:not(:last-child) { height : 121px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="3"]:not(:last-child) { height : 130px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="3"]:last-child { height : 121px }
+			  
+	
+		.mwInput[size="4"] { height : 152px }
+		.combo .mwInput[size="4"]:not(:last-child) { height : 161px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="4"]:not(:last-child) { height : 170px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="4"]:last-child { height : 161px }
+			  
+	
+		.mwInput[size="5"] { height : 192px }
+		.combo .mwInput[size="5"]:not(:last-child) { height : 201px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="5"]:not(:last-child) { height : 210px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="5"]:last-child { height : 201px }
+			  
+	
+		.mwInput[size="6"] { height : 232px }
+		.combo .mwInput[size="6"]:not(:last-child) { height : 241px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="6"]:not(:last-child) { height : 250px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="6"]:last-child { height : 241px }
+			  
+	
+		.mwInput[size="7"] { height : 272px }
+		.combo .mwInput[size="7"]:not(:last-child) { height : 281px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="7"]:not(:last-child) { height : 290px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="7"]:last-child { height : 281px }
+			  
+	
+		.mwInput[size="8"] { height : 312px }
+		.combo .mwInput[size="8"]:not(:last-child) { height : 321px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="8"]:not(:last-child) { height : 330px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="8"]:last-child { height : 321px }
+			  
+	
+		.mwInput[size="9"] { height : 352px }
+		.combo .mwInput[size="9"]:not(:last-child) { height : 361px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="9"]:not(:last-child) { height : 370px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="9"]:last-child { height : 361px }
+			  
+	
+		.mwInput[size="10"] { height : 392px }
+		.combo .mwInput[size="10"]:not(:last-child) { height : 401px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="10"]:not(:last-child) { height : 410px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="10"]:last-child { height : 401px }
+			  
+	
+		.mwInput[size="11"] { height : 432px }
+		.combo .mwInput[size="11"]:not(:last-child) { height : 441px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="11"]:not(:last-child) { height : 450px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="11"]:last-child { height : 441px }
+			  
+	
+		.mwInput[size="12"] { height : 472px }
+		.combo .mwInput[size="12"]:not(:last-child) { height : 481px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="12"]:not(:last-child) { height : 490px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="12"]:last-child { height : 481px }
+			  
+	
+		.mwInput[size="13"] { height : 512px }
+		.combo .mwInput[size="13"]:not(:last-child) { height : 521px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="13"]:not(:last-child) { height : 530px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="13"]:last-child { height : 521px }
+			  
+	
+		.mwInput[size="14"] { height : 552px }
+		.combo .mwInput[size="14"]:not(:last-child) { height : 561px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="14"]:not(:last-child) { height : 570px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="14"]:last-child { height : 561px }
+			  
+	
+		.mwInput[size="15"] { height : 592px }
+		.combo .mwInput[size="15"]:not(:last-child) { height : 601px } 
+	
+		
+			.combo .mwInput:not(.multiline)+.mwInput[size="15"]:not(:last-child) { height : 610px } 
+			.combo .mwInput:not(.multiline)+.mwInput[size="15"]:last-child { height : 601px }
+			  
+	
+
+/* Full height */
+
+.mwInput.fullHeight 
+{ 
+	min-height		: calc(100% - 8px) 
+}
+
+.mwInput.flat.fullHeight 
+{ 
+	min-height		: 100% 
+}
+
+.winContent>.mwInput.fullHeight,
+.winContainer>.mwInput.fullHeight
+{
+	min-height		: 100%;
+	margin			: 0px;
+}
+
+/* ---- Inputs cells ---- */
+
+/* Used for easy layout of several inputs within one row */
+/* Speciefic implementation of morweb common cells css, adapted to inputs styles */
+/* Little too much copypaste, but very handy to use on templates */
+
+.mwInput.cell { float : left; }
+.mwInput.cell-5, .mwDialog dt>label.cell-5 { float : left; width : calc(5% - 8px) !important; }
+.mwInput.cell-10, .mwDialog dt>label.cell-10 { float : left; width : calc(10% - 8px) !important; }
+.mwInput.cell-15, .mwDialog dt>label.cell-15 { float : left; width : calc(15% - 8px) !important; }
+.mwInput.cell-20, .mwDialog dt>label.cell-20 { float : left; width : calc(20% - 8px) !important; }
+.mwInput.cell-25, .mwDialog dt>label.cell-25 { float : left; width : calc(25% - 8px) !important; }
+.mwInput.cell-30, .mwDialog dt>label.cell-30 { float : left; width : calc(30% - 8px) !important; }
+.mwInput.cell-35, .mwDialog dt>label.cell-35 { float : left; width : calc(35% - 8px) !important; }
+.mwInput.cell-40, .mwDialog dt>label.cell-40 { float : left; width : calc(40% - 8px) !important; }
+.mwInput.cell-45, .mwDialog dt>label.cell-45 { float : left; width : calc(45% - 8px) !important; }
+.mwInput.cell-50, .mwDialog dt>label.cell-50 { float : left; width : calc(50% - 8px) !important; }
+.mwInput.cell-55, .mwDialog dt>label.cell-55 { float : left; width : calc(55% - 8px) !important; }
+.mwInput.cell-60, .mwDialog dt>label.cell-60 { float : left; width : calc(60% - 8px) !important; }
+.mwInput.cell-65, .mwDialog dt>label.cell-65 { float : left; width : calc(65% - 8px) !important; }
+.mwInput.cell-70, .mwDialog dt>label.cell-70 { float : left; width : calc(70% - 8px) !important; }
+.mwInput.cell-75, .mwDialog dt>label.cell-75 { float : left; width : calc(75% - 8px) !important; }
+.mwInput.cell-80, .mwDialog dt>label.cell-80 { float : left; width : calc(80% - 8px) !important; }
+.mwInput.cell-85, .mwDialog dt>label.cell-85 { float : left; width : calc(85% - 8px) !important; }
+.mwInput.cell-90, .mwDialog dt>label.cell-90 { float : left; width : calc(90% - 8px) !important; }
+.mwInput.cell-95, .mwDialog dt>label.cell-95 { float : left; width : calc(95% - 8px) !important; }
+.mwInput.cell-100, .mwDialog dt>label.cell-100 { float : left; width : calc(100% - 8px) !important; }
+.mwInput.cell-33, .mwDialog dt>label.cell-33 { float : left; width : calc(33.33% - 8px) !important; }
+.mwInput.cell-66, .mwDialog dt>label.cell-66 { float : left; width : calc(66.66% - 8px) !important; }
+.mwInput.cell-16, .mwDialog dt>label.cell-16 { float : left; width : calc(16.66% - 8px) !important; }
+
+.mwInput.cell-even {
+	float : left;
+}
+.mwInput.cell-even:first-child:nth-last-child(1), .mwInput.cell-even:first-child:nth-last-child(1) ~ .mwInput.cell-even { width : calc(100% - 8px) !important; }
+.mwInput.cell-even:first-child:nth-last-child(2), .mwInput.cell-even:first-child:nth-last-child(2) ~ .mwInput.cell-even { width : calc(50% - 8px) !important; }
+.mwInput.cell-even:first-child:nth-last-child(3), .mwInput.cell-even:first-child:nth-last-child(3) ~ .mwInput.cell-even { width : calc(33.33% - 8px) !important; }
+.mwInput.cell-even:first-child:nth-last-child(4), .mwInput.cell-even:first-child:nth-last-child(4) ~ .mwInput.cell-even { width : calc(25% - 8px) !important; }
+.mwInput.cell-even:first-child:nth-last-child(5), .mwInput.cell-even:first-child:nth-last-child(5) ~ .mwInput.cell-even { width : calc(20% - 8px) !important; }
+.mwInput.cell-even:first-child:nth-last-child(6), .mwInput.cell-even:first-child:nth-last-child(6) ~ .mwInput.cell-even { width : calc(16.66% - 8px) !important; }
+.mwInput.cell-even:first-child:nth-last-child(7), .mwInput.cell-even:first-child:nth-last-child(7) ~ .mwInput.cell-even { width : calc(14.28% - 8px) !important; }
+.mwInput.cell-even:first-child:nth-last-child(8), .mwInput.cell-even:first-child:nth-last-child(8) ~ .mwInput.cell-even { width : calc(12.5% - 8px) !important; }
+.mwInput.cell-even:first-child:nth-last-child(9), .mwInput.cell-even:first-child:nth-last-child(9) ~ .mwInput.cell-even { width : calc(11.11% - 8px) !important; }
+.mwInput.cell-even:first-child:nth-last-child(10), .mwInput.cell-even:first-child:nth-last-child(10) ~ .mwInput.cell-even { width : calc(10% - 8px) !important; }
+.mwDialog dt > label.cell-even:first-child:nth-last-child(1), .mwDialog dt > label.cell-even:first-child:nth-last-child(1) ~ label.cell-even { width : calc(100% - 8px) !important; }
+.mwDialog dt > label.cell-even:first-child:nth-last-child(2), .mwDialog dt > label.cell-even:first-child:nth-last-child(2) ~ label.cell-even { width : calc(50% - 8px) !important; }
+.mwDialog dt > label.cell-even:first-child:nth-last-child(3), .mwDialog dt > label.cell-even:first-child:nth-last-child(3) ~ label.cell-even { width : calc(33.33% - 8px) !important; }
+.mwDialog dt > label.cell-even:first-child:nth-last-child(4), .mwDialog dt > label.cell-even:first-child:nth-last-child(4) ~ label.cell-even { width : calc(25% - 8px) !important; }
+.mwDialog dt > label.cell-even:first-child:nth-last-child(5), .mwDialog dt > label.cell-even:first-child:nth-last-child(5) ~ label.cell-even { width : calc(20% - 8px) !important; }
+.mwDialog dt > label.cell-even:first-child:nth-last-child(6), .mwDialog dt > label.cell-even:first-child:nth-last-child(6) ~ label.cell-even { width : calc(16.66% - 8px) !important; }
+.mwDialog dt > label.cell-even:first-child:nth-last-child(7), .mwDialog dt > label.cell-even:first-child:nth-last-child(7) ~ label.cell-even { width : calc(14.28% - 8px) !important; }
+.mwDialog dt > label.cell-even:first-child:nth-last-child(8), .mwDialog dt > label.cell-even:first-child:nth-last-child(8) ~ label.cell-even { width : calc(12.5% - 8px) !important; }
+.mwDialog dt > label.cell-even:first-child:nth-last-child(9), .mwDialog dt > label.cell-even:first-child:nth-last-child(9) ~ label.cell-even { width : calc(11.11% - 8px) !important; }
+.mwDialog dt > label.cell-even:first-child:nth-last-child(10), .mwDialog dt > label.cell-even:first-child:nth-last-child(10) ~ label.cell-even { width : calc(10% - 8px) !important; }
+
+/* ---- Inputs Combos ---- */
+
+/* 
+	Combo inputs loose margins and stack borders
+	Topmost and bottom most margins are controlled by wrapper 
+*/
+
+.combo {
+	padding-top		: 4px;
+	padding-bottom		: 5px;
+}
+
+.combo .mwInput {
+	margin-top		: 0px;
+	margin-bottom		: -1px;		
+}
+
+/* 
+	Buttons stacking
+	Buttons have special stacking, trying to layout on right
+	Except autowidth buttons, which behave like normal single line inputs 
+*/
+.combo .mwInput.button:not(.auto) {
+	float			: right;
+	margin-left		: 0px;
+	border-left		: none;
+}
+
+.combo .mwInput.button+.mwInput.button:not(.auto) {
+	border-right		: none; 
+}
+
+.combo .mwInput.button+.mwInput:not(.auto) {
+	margin-right		: 0px;
+}
+
+/* Fixes and cleanups */
+form.combo, 
+.combo form {
+	overflow		: auto;
+}
+
+.combo:after {
+	content			: '';
+	display			: block;
+	clear			: both;
+}
+
+/* ---- HELPERS ------------------------------------------------------------------------------------------------------------- */
+

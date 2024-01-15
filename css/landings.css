@@ -1,0 +1,99 @@
+/*
+Landing Header One
+*/
+/*  socialMedia  */
+.landingHeaderOne .socialMediaLinksWrap { float: right; font-size: 10pt;margin-top: 13px;}
+.landingHeaderOne .socialMediaLinksWrap span { padding: 7px; background: #999; border-radius: 50%; height: 12px; width: 12px; color: #fff; margin: 0 2px; }
+.landingHeaderOne .socialMediaLinksWrap span:hover { color: #222; }
+.landingHeaderOne .soLinkGen a.circle { background:#444; color:#fff;}
+.landingHeaderOne .soLinkGen a.circle:hover { background:#222;}
+.landingHeaderOne .soLinkGen a.square { background:#444; color:#fff;}
+.landingHeaderOne .soLinkGen a.square:hover { background:#222;}
+
+/*  Search  */
+.landingHeaderOne .search { float: right; margin: 0 10px; font-size: 10pt; }
+/*  Utility Menu  */
+.landingHeaderOne .utilityMenu { float: right; font-size: 10pt; }
+/*  Header  */
+.landingHeaderOne .headerWrap { background: #f1f1f1;}
+.landingHeaderOne .header {padding: 25px 0;}
+.landingHeaderOne .header:after { clear: both; content: " "; display: block; height: 0; visibility: hidden; }
+/*  Logo  */
+.landingHeaderOne .logo { float: left; margin: 0 25px 0 0; }
+/*  Menu Wrap  */
+.landingHeaderOne .menuWrap { float: left; }
+.landingHeaderOne #responsive-menu-button { top: 26px; }
+/*  Donate Button  */
+.landingHeaderOne .donateButton { float: right; margin-top: 7px; text-align: center; }
+.landingHeaderOne .donateButton p { padding-bottom: 0; }
+.landingHeaderOne .donateButton p a { text-decoration: none; color: #fff; background: #444; padding: 8px 16px; }
+.landingHeaderOne .donateButton p a:hover { color: #fff; background: #111; }
+ @media (max-width: 768px) {
+.landingHeaderOne .header {padding: 15px;}
+}
+/*
+Landing Header Two
+*/
+/*  Header  */
+.landingHeaderTwo .headerWrap { background: #f1f1f1;}
+.landingHeaderTwo .header { padding: 25px 0; }
+.landingHeaderTwo .header:after { clear: both; content: " "; display: block; height: 0; visibility: hidden; }
+/*  Logo  */
+.landingHeaderTwo .logo { margin: 0 auto;     display: table;}
+/*  Menu Wrap  */
+.landingHeaderTwo .menuWrap { float: left; }
+.landingHeaderTwo #responsive-menu-button { top: 26px; }
+/*  Donate Button  */
+.landingHeaderTwo .donateButton { float: right; margin-top: 7px; text-align: center; }
+.landingHeaderTwo .donateButton p { padding-bottom: 0; }
+.landingHeaderTwo .donateButton p a { text-decoration: none; color: #fff; background: #444; padding: 8px 16px; }
+.landingHeaderTwo .donateButton p a:hover { color: #fff; background: #111; }
+
+
+ @media (max-width: 768px) {
+}
+
+/*
+Landing Footer One
+*/
+
+/* copyright */
+.landingFooterOne .copyrightWrap { background: #f1f1f1; }
+.landingFooterOne .copyright { padding: 50px 0; }
+.landingFooterOne .copyright .twoColRight {text-align: right;}
+.landingFooterOne .copyright p { color: #000; padding: 10px 0;}
+.landingFooterOne .copyright a { color: #000; text-decoration: underline; font-weight: 500; }
+.landingFooterOne .copyright a:hover { color: #ccc; }
+
+/*  socialMedia  */
+.landingFooterOne .socialMediaLinksWrap {font-size: 10pt;}
+.landingFooterOne .socialMediaLinksWrap span { padding: 7px; background: #999; border-radius: 50%; height: 12px; width: 12px; color: #fff; margin: 0 2px; }
+.landingFooterOne .socialMediaLinksWrap span:hover { color: #222; }
+.landingFooterOne .soLinkGen a.circle { background:#444; color:#fff;}
+.landingFooterOne .soLinkGen a.circle:hover { background:#222;}
+.landingFooterOne .soLinkGen a.square { background:#444; color:#fff;}
+.landingFooterOne .soLinkGen a.square:hover { background:#222;}
+ @media (max-width: 768px) {
+.landingFooterOne .copyright .twoColRight {text-align: center;}
+ }
+
+/*
+Landing Footer Two
+*/
+
+/* copyright */
+.landingFooterTwo .footerWrap{background: #f1f1f1;}
+.landingFooterTwo .footer{width: 1000px;margin:0 auto; text-align:center;}
+
+.landingFooterTwo .copyright p { color: #000; padding: 10px 0;}
+.landingFooterTwo .copyright a { color: #000; text-decoration: underline; font-weight: 500; }
+.landingFooterTwo .copyright a:hover { color: #ccc; }
+
+/*  socialMedia  */
+.landingFooterTwo .socialMediaLinksWrap {font-size: 10pt;  margin-bottom: 25px;}
+.landingFooterTwo .socialMediaLinksWrap span { padding: 7px; background: #999; border-radius: 50%; height: 12px; width: 12px; color: #fff; margin: 0 2px; }
+.landingFooterTwo .socialMediaLinksWrap span:hover { color: #222; }
+.landingFooterTwo .soLinkGen a.circle { background:#444; color:#fff;}
+.landingFooterTwo .soLinkGen a.circle:hover { background:#222;}
+.landingFooterTwo .soLinkGen a.square { background:#444; color:#fff;}
+.landingFooterTwo .soLinkGen a.square:hover { background:#222;}

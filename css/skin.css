@@ -1,0 +1,3271 @@
+/*
+
+Master Theme Default Skin
+
+*/
+
+
+
+@import url("https://use.typekit.net/ols3riw.css");
+
+
+
+
+
+/*  Global  */
+
+body {
+    background: #ffffff;
+}
+
+/*  Header Stuck */
+
+.headerWrap.stuck {
+    background: #ffffff;
+}
+
+/*  Main Menu  */
+
+.mainMenu ul li a,
+.mainMenu ul li {
+    color: #01416f;
+    text-transform: uppercase;
+    font-size: 10pt;
+    letter-spacing: 1px;
+}
+
+.mainMenu ul li ul li,
+.mainMenu ul li ul li a {
+    color: #ffffff !important;
+}
+
+.mainMenu ul li ul li ul {
+    background: #01416f;
+}
+
+.mainMenu ul li:hover a {
+    color: #01416f;
+}
+
+.mainMenu ul li ul li:hover {
+    background: #01416f;
+    color: #ffffff !important;
+}
+
+.mainMenu ul li ul {
+    background: #f7941d;
+}
+
+#mobile-header #navIcon span {
+    background: #01416f;
+}
+
+/* Utility Menu */
+
+.utilityMenu ul li a {
+    color: #014170;
+}
+
+.utilityMenu ul li a:hover {
+    color: #323232;
+}
+
+/* Search */
+
+.searchWrap {
+    background: #efefef;
+}
+
+.searchHolder {
+    color: #888888;
+}
+
+.searchHolder label {
+    color: #888888;
+}
+
+.searchHolder input[type=submit] {
+    background: #f7941d;
+    color: #01416f !important;
+}
+
+.searchHolder input[type=submit]:hover {
+    background: #888888;
+}
+
+.searchClose {
+    color: #888888;
+}
+
+.searchIcon {
+    color: #01416f;
+}
+
+.searchIcon:hover,
+.searchClose:hover {
+    color: #888888;
+}
+
+/* Main Content Areas */
+
+
+
+/* General Content Areas */
+
+.mainContentArea {}
+
+.contentAreaWhite {
+    background: #ffffff;
+}
+
+.contentAreaColored {
+    background: #efefef;
+}
+
+.contentAreaColored.orange {
+    background: url(/images/alert.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+/* Text */
+
+.mainContentArea h1,
+h1 {
+    color: #01416f;
+}
+
+.mainContentArea h2,
+h2 {
+    color: #01416f;
+}
+
+.mainContentArea h3,
+h3 {
+    color: #01416f;
+}
+
+.mainContentArea h4,
+h4 {
+    color: #01416f;
+}
+
+.mainContentArea h5,
+h5 {
+    color: #01416f;
+}
+
+.mainContentArea h6,
+h6 {
+    color: #01416f;
+    font-size: 13pt;
+}
+
+.videoBannerText h6 {
+    color: #fff;
+    font-size: 13pt;
+}
+
+.mainContentArea p {
+    color: #666666;
+}
+
+.mainContentArea a {
+    color: #01416f;
+}
+
+.mainContentArea a:hover {
+    color: #888888;
+}
+
+/* Lists */
+
+.mainContentArea ul li {
+    color: #666666;
+}
+
+.mainContentArea ol li {
+    color: #666666;
+}
+
+/* Extras */
+
+.mainContentArea blockquote {
+    color: #f7941d;
+}
+
+.mainContentArea blockquote p {
+    color: #f7941d;
+}
+
+.mainContentArea hr {
+    color: #ffffff;
+    background-color: #efefef;
+}
+
+/* Tables */
+
+.mainContentArea table {
+    color: #454546;
+    border-top: 1px solid #efefef;
+    border-left: 1px solid #efefef;
+}
+
+.mainContentArea table tr td,
+.mainContentArea table tr th {
+    border-bottom: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+}
+
+/* Forms */
+
+table.Dialog th {
+    color: #01416f;
+}
+
+.Dialog .mwInput {
+    color: #888888 !important;
+    border: 1px solid #dddddd;
+    background: #ffffff;
+}
+
+.Dialog .mwInput:hover,
+.Dialog .mwInput:focus {
+    background: #efefef;
+}
+
+.Dialog .mwInput.error {
+    border: 1px solid red;
+}
+
+.Dialog select .mw {
+    color: #ffffff;
+}
+
+/* Forms Button*/
+
+.Dialog .mwInput.button {
+    color: #01416f;
+    background: #f7941d;
+    border: none;
+}
+
+.Dialog .mwInput.button:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+.Dialog .mwInput.button input.mw {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff !important;
+}
+
+.Dialog .mwInput.button:hover input.mw {
+    color: #ffffff !important;
+}
+
+/* Embed */
+
+
+
+
+
+/* Buttons */
+
+
+
+/* Default */
+
+.button p a {
+    background: #f7941d;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.button p a:hover {
+    background: rgba(159, 216, 237, 1) !important;
+    color: #01416f !important;
+}
+
+/* Rounded */
+
+.button.rounded p a {}
+
+.button.rounded p a:hover {}
+
+.button.rounded p a:active {}
+
+/* Border */
+
+.button.border p a {
+    background: none;
+    color: #f7941d;
+    border: 1px solid #f7941d;
+}
+
+.button.border p a:hover {
+    background: #f7941d;
+    color: #ffffff;
+    border: 1px solid #f7941d;
+}
+
+/* Trim */
+
+.button.trim p a:before {
+    border: #ffffff solid 2px;
+}
+
+/* Footer  */
+
+.footer a {
+    color: #f7941d;
+}
+
+.footer a:hover {
+    color: #888888;
+}
+
+/* Copyright */
+
+.copyrightWrap {
+    background: #efefef;
+}
+
+.copyright a {
+    color: #f7941d;
+}
+
+.copyright a:hover {
+    color: #888888;
+}
+
+/* ToTop */
+
+.toTop {
+    background: #f7941d;
+    top: -23px;
+    padding: 5px 5px 5px 10px;
+    color: #01416f;
+}
+
+.toTop:hover {
+    background: #01416f;
+    color: #f7941d;
+}
+
+/* Social Media Links */
+
+.soLinkGen a {
+    color: #01416f;
+}
+
+.soLinkGen a.square {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.soLinkGen a.circle {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.soLinkGen a:hover {
+    background: rgba(159, 216, 237, 1) !important;
+    color: #01416f !important;
+}
+
+.soLinkGen a.square:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+.soLinkGen a.circle:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+/*  Gallery  */
+
+.zoom-gallery .itemHover {
+    background: #01416f;
+    color: #ffffff;
+}
+
+/*  Grid Gallery  */
+
+.gridGalleryItem {
+    background: #f7941d;
+}
+
+/*  Banners - Two Columns */
+
+
+
+.contentImgCol .twoColumn a.colContentbtn {
+    background: #f7941d;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.contentImgCol .twoColumn a.colContentbtn:hover {
+    background: rgba(159, 216, 237, 1) !important;
+    color: #01416f !important;
+}
+
+/*  Video Banner  */
+
+.videoBannerInner {
+    background: rgba(0, 0, 0, .2);
+}
+
+.videoBanner h2 {
+    color: #ffffff;
+}
+
+.videoBannerText {
+    color: #ffffff;
+}
+
+/* Private Pages */
+
+.register input[type="checkbox"]:after {
+    background: #efefef;
+}
+
+/* Accordion One */
+
+.accordionBtn {
+    background: #01416f;
+}
+
+.accordionBtn:hover {
+    background: #01416f;
+}
+
+.accordionBtn a p {
+    color: #fff;
+}
+
+.accordionContent {
+    background: #efefef;
+    border: 1px solid #efefef;
+}
+
+/* Accordion Two */
+
+.accordion.two .accordionBtn {
+    background: #ffffff;
+}
+
+.accordion.two .accordionBtn:hover {
+    background: #efefef;
+}
+
+.accordion.two .accordionBtn a p {
+    color: #01416f;
+}
+
+.accordion.two .accordionContent {
+    background: #ffffff;
+    border: 1px solid #efefef;
+}
+
+/* Accordion Three */
+
+.accordion.three .accordionBtn3 p {
+    color: #01416f;
+}
+
+.accordion.three .accordionContent3 {
+    padding: 8px 14px 0;
+    background: #ffffff;
+    border: 1px solid #efefef;
+
+}
+
+/*  Sidebar Search  */
+
+.sidebarSearch input {
+    border: 1px solid #efefef;
+}
+
+.sidebarSearch label {
+    color: #01416f;
+}
+
+.sidebarSearch input[type=submit] {
+    background: #f7941d;
+    color: #ffffff !important;
+}
+
+.sidebarSearch input[type=submit]:hover {
+    background: #01416f;
+    color: #f7941d !important;
+}
+
+/* Twitter Feeds */
+
+
+
+/* Twitter Feed One */
+
+.tweetTitle {
+    background: #f7941d;
+}
+
+.tweetTitle h1,
+.tweetTitle h2,
+.tweetTitle h3,
+.tweetTitle h4,
+.tweetTitle h5,
+.tweetTitle h6,
+.tweetTitle p {
+    color: #ffffff;
+}
+
+.twitterFeedWrap.one #twitterFeed ul li {
+    border-bottom: 1px solid #efefef;
+}
+
+/* Twitter Feed Two */
+
+.twitterFeedWrap.two {
+    background: #efefef;
+}
+
+/* Twitter Feed Three */
+
+.twitterFeedWrap.three {
+    background: url(/get/files/image/galleries/International3.jpg) center center no-repeat;
+}
+
+.twitterFeedWrap.three .tweetInner {
+    background: rgba(0, 0, 0, .7);
+}
+
+.twitterFeedWrap.three #twitterFeed .tweet {
+    color: #ffffff;
+}
+
+.twitterFeedWrap.three #twitterFeed .tweet a {
+    color: #ffffff;
+}
+
+.twitterFeedWrap.three #twitterFeed .timePosted {
+    color: #ffffff;
+}
+
+.twitterFeedWrap.three #twitterFeed .user a {
+    color: #ffffff;
+}
+
+.twitterFeedWrap.three #twitterFeed .interact a {
+    color: #ffffff;
+}
+
+.twitterFeedWrap.three h2 .fa {
+    color: #ffffff;
+}
+
+/* Instagram Feed One  */
+
+.igFeedOne .igviewer {
+    background-color: RGBA(29, 31, 32, 0.9);
+}
+
+.igFeedOne .instagram .image .caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+}
+
+/* Instagram Feed Two  */
+
+.igFeedTwo .igviewer {
+    background-color: RGBA(29, 31, 32, 0.9);
+}
+
+.igFeedTwo .instagram .image .caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+}
+
+/* Instagram Feed Three  */
+
+.igFeedThree .igviewer {
+    background-color: RGBA(29, 31, 32, 0.9);
+}
+
+.igFeedThree .instagram .image .caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+}
+
+/* Blogs */
+
+.borderLine {
+    background: #efefef;
+}
+
+/* Blog Share Default */
+
+.shareButtonDefault .fa {
+    color: #f7941d;
+}
+
+.shareButtonDefault .fa:hover {
+    color: #f7941d;
+}
+
+/* Slide Out Share */
+
+.slideOutShare {
+    background: #f7941d;
+}
+
+.slideOutShareItems {
+    color: #ffffff;
+}
+
+.slideOutShareBtn {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.slideOutShareBtn:hover {
+    background: #888888;
+}
+
+.shareButton2 {
+    color: #ffffff;
+}
+
+.blogShareIcon {
+    color: #ffffff;
+}
+
+/* Blog Share Circle */
+
+.shareButtonCIRC .fa {
+    color: #ffffff;
+    background: #f7941d;
+}
+
+.shareButtonCIRC .fa:hover {
+    color: #ffffff;
+    background: #01416f;
+}
+
+/* Blog Share Square */
+
+.shareButtonSQR .fa {
+    color: #ffffff;
+    background: #f7941d;
+}
+
+.shareButtonSQR .fa:hover {
+    color: #ffffff;
+    background: #01416f;
+}
+
+/* Blog Post Three */
+
+.postThree .twoColRight {
+    background: #efefef;
+    border-bottom: 5px solid #efefef;
+}
+
+.postThree h2.title {
+    border-bottom: 1px solid #f7941d;
+}
+
+/* Blog Post Category */
+
+.blogCategories ul li {
+    border-bottom: 1px dashed #efefef;
+}
+
+.blogCategories ul li:hover {
+    background: #efefef;
+}
+
+/* Events Post List */
+
+.eventsList .date,
+.eventsListTwo .date {
+    background: #f7941d;
+}
+
+/* Grid Post List */
+
+.blogGrid a h3 {
+    color: #ffffff;
+    background: rgba(0, 0, 0, .5);
+}
+
+/* Grid Carousel  */
+
+.blogGridCarousel .owl-page {
+    border: 1px solid #f7941d;
+}
+
+.blogGridCarousel .owl-page.active {
+    background: #f7941d;
+}
+
+/* Post List Banner Tabs */
+
+.blogTabItem {
+    background: none;
+}
+
+.blogTabWrap .owl-theme .owl-controls .item-link {
+    color: #ffffff;
+}
+
+.blogTabWrap .owl-page .item-link {
+    border-bottom: 1px solid #888888;
+    background: #01416f
+}
+
+.blogTabWrap .owl-page .item-link:hover,
+.blogTabWrap .owl-carousel .owl-page.active .item-link {
+    color: #01416f;
+    background: #f7941d
+}
+
+.blogTabWrap .owl-pagination {
+    background: none !important;
+}
+
+.blogTabImage h6 {
+    color: #f7941d;
+}
+
+.blogTabImage p {
+    color: #f7941d;
+}
+
+/* Small Modal Window */
+
+.modalbgSmall {
+    background: rgba(0, 0, 0, 0);
+}
+
+.modalbgSmall .dialogSmall {
+    background: #ffffff;
+}
+
+.modalbgSmall:target {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.closeModal {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.closeModal span {
+    color: #ffffff;
+}
+
+.closeModal:hover {
+    background: #888888;
+}
+
+/* Large Modal Window */
+
+.modalbgLarge {
+    background: rgba(0, 0, 0, 0);
+}
+
+.modalbgLarge .dialogLarge {
+    background: #ffffff;
+}
+
+.modalbgLarge:target {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.closeModal {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.closeModal span {
+    color: #ffffff;
+}
+
+.closeModal:hover {
+    background: #888888;
+}
+
+/* Private Pages */
+
+.register input[type="checkbox"]:after {
+    background: #efefef;
+}
+
+/* Pricing Table One */
+
+.pricingContainerOne .pricingHeader {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.pricingContainerOne .pricingHeader h1,
+.pricingContainerOne .pricingHeader h2,
+.pricingContainerOne .pricingHeader h3,
+.pricingContainerOne .pricingHeader h4,
+.pricingContainerOne .pricingHeader h5,
+.pricingContainerOne .pricingHeader h6 {
+    color: #ffffff;
+}
+
+.pricingContainerOne .price {
+    background: #efefef;
+    color: #ffffff;
+}
+
+.pricingContainerOne .itemsWrapper {
+    border: 1px solid #efefef;
+    background: #ffffff;
+}
+
+/* Pricing Table Two */
+
+.pricingContainerTwo .pricingHeader {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.pricingContainerTwo .pricingHeader h1,
+.pricingContainerTwo .pricingHeader h2,
+.pricingContainerTwo .pricingHeader h3,
+.pricingContainerTwo .pricingHeader h4,
+.pricingContainerTwo .pricingHeader h5,
+.pricingContainerTwo .pricingHeader h6,
+.pricingContainerTwo .pricingHeader p {
+    color: #ffffff !important;
+}
+
+.pricingContainerTwo .price {
+    background: #efefef;
+    color: #ffffff;
+}
+
+.pricingContainerTwo .itemsWrapper {
+    border: 1px solid #efefef;
+    background: #ffffff;
+}
+
+/* Pricing Table Three */
+
+.pricingContainerThree {
+    border: 1px solid #efefef;
+}
+
+.pricingContainerThree .pricingHeader {
+    background: #ffffff;
+    color: #ffffff;
+    border-bottom: 1px solid #efefef;
+}
+
+.pricingContainerThree .price {
+    background: #efefef;
+    color: #ffffff;
+    border-bottom: 1px solid #efefef;
+}
+
+.pricingContainerThree .itemsWrapper {
+    background: #efefef;
+    background: #ffffff;
+}
+
+.pricingContainerThree .itemsWrapper .items ul li {
+    border-bottom: 1px solid #efefef;
+}
+
+/* Counter One */
+
+.counterWrap.one .fa-2x {
+    color: #ffffff;
+    background: #f7941d;
+}
+
+.counterWrap.one .fourColCol {
+    background: #ffffff;
+}
+
+/* Counter Two */
+
+.counterWrap.two .fa-2x {
+    color: #f7941d;
+}
+
+.counterWrap.two .fourColCol {
+    background: #efefef;
+}
+
+/* Counter Three */
+
+.counterWrap.three .fa-2x {
+    color: #f7941d;
+}
+
+.counterWrap.three .threeCol {
+    background: #f7941d;
+}
+
+.counterWrap.three .threeCol h1,
+.counterWrap.three .threeCol h2,
+.counterWrap.three .threeCol h3,
+.counterWrap.three .threeCol h4,
+.counterWrap.three .threeCol h5,
+.counterWrap.three .threeCol h6 {
+    color: #ffffff;
+}
+
+.counterWrap.three .threeCol p {
+    color: #ffffff;
+}
+
+/* Sticky Donate */
+
+.stickyDonate a {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.stickyDonate a:hover {
+    background: #01416f;
+    color: #ffffff;
+}
+
+/* Donation Banner */
+
+.donationBannerWrap {
+    background: url(/get/files/image/galleries/Sci_High_2018_Web_012.jpg) center center no-repeat;
+    background-size: cover
+}
+
+.donationBannerInner {
+    background: rgba(230, 230, 230, .80);
+}
+
+.dollarSign {
+    border: 1px solid #efefef;
+    color: #01416f;
+}
+
+.donationBannerInner input.mwFormSubmit {
+    background: #f7941d;
+    color: #01416f;
+    letter-spacing: 1px;
+}
+
+.donationBannerInner input.mwFormSubmit:hover {
+    background: #01416f;
+    color: #f7941d;
+}
+
+/* Donate Form 1 */
+
+.donateForm table.Dialog input {
+    color: #323232;
+}
+
+.donateForm table.Dialog select {
+    color: #f7941d;
+}
+
+.donateForm table.Dialog {
+    color: #f7941d;
+}
+
+.donateForm .monthly {
+    color: #01416f;
+}
+
+.donateForm input {
+    border: 1px solid #efefef;
+}
+
+.donateForm select {
+    border: 1px solid #efefef;
+}
+
+.donateForm input[type="checkbox"]:after {
+    background: #efefef;
+    border: 2px solid #f7941d;
+    border-radius: 50%;
+}
+
+.donateForm input[type="checkbox"]:checked:after {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.donateForm input.btn {
+    background: #01416f;
+    color: #f7941d;
+}
+
+.donateForm input.btn:hover {
+    background: #f7941d;
+    color: #01416f;
+}
+
+.donateForm .mwFormSubmitRow input[type="submit"] {
+    border: 1px solid #efefef;
+    color: #f7941d;
+}
+
+.donateForm .mwFormSubmitRow input[type="submit"]:hover {
+    border: 2px solid #DF161A;
+    color: #DF161A;
+}
+
+.donateForm input.btn.active {
+    border: 2px solid #f7941d;
+    color: #01416f;
+    background: #f7941d;
+}
+
+.donateForm .requiredFields {
+    color: #f7941d;
+}
+
+.donateForm .readonly input {
+    border: 1px solid #888888;
+    color: #efefef;
+}
+
+/* Donate Buttons */
+
+.btnWrap input {
+    background: #f7941d;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btnWrap input:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+/* Donate Form 3 */
+
+.donateWrap.three {
+    background: #efefef;
+}
+
+#input-wrapper input[type=range]::-webkit-slider-runnable-track {
+
+    background: #f7941d;
+
+}
+
+#input-wrapper input[type=range]::-webkit-slider-thumb {
+
+    background: #888888;
+
+}
+
+#input-wrapper input[type=range]:focus::-webkit-slider-runnable-track {
+
+    background: #888888;
+
+}
+
+#input-wrapper input[type=range]::-moz-range-track {
+
+    background: #888888;
+
+}
+
+#input-wrapper input[type=range]::-moz-range-thumb {
+
+    background: #888888;
+
+}
+
+#input-wrapper input[type=range]::-ms-fill-lower {
+
+    background: #888888;
+
+}
+
+#input-wrapper input[type=range]::-ms-fill-upper {
+
+    background: #888888;
+
+}
+
+#input-wrapper input[type=range]::-ms-thumb {
+
+    background: #ffffff;
+
+}
+
+#input-wrapper input[type=range]:focus::-ms-fill-lower {
+
+    background: #888888;
+
+}
+
+#input-wrapper input[type=range]:focus::-ms-fill-upper {
+
+    background: #888888;
+
+}
+
+/* Donate Form 4 */
+
+.donateWrap.four {}
+
+.donateWrap.four .donationTabs ul li {
+    background: #f7941d;
+    color: #01416f;
+}
+
+.donateWrap.four .donationTabs ul li:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+
+
+@media (max-width: 768px) {
+
+    /* blogShareSticky */
+
+    .blogShareSticky {
+        background: #efefef;
+    }
+
+    /* donation Banner Inner */
+
+    .donationBannerInner {
+        background: #efefef;
+    }
+
+    /* Blog Post Three */
+
+    .postThree .twoColRight {
+        background: #efefef;
+        border-bottom: 5px solid #efefef;
+    }
+
+}
+
+
+
+@media (max-width: 640px) {
+
+    .slideOutShare {
+        background: #f7941d;
+    }
+
+    .slideOutShareItems {
+        color: #ffffff;
+    }
+
+    .slideOutShareBtn {
+        background: #f7941d;
+    }
+
+    .slideOutShareBtn:hover {
+        background: #888888;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+    /* Sticky Donate */
+
+    .stickyDonate a {
+        background: #f7941d;
+        color: #ffffff;
+    }
+
+    .stickyDonate a:hover {
+        background: #f7941d;
+    }
+
+}
+
+/*  MW Widget Resets  */
+
+.bannerCaption {
+    background: rgba(255, 255, 255, .8);
+}
+
+
+
+@media (max-width: 768px) {
+
+    .bannerCaption {
+        background: rgba(255, 255, 255, 1);
+    }
+
+}
+
+/*
+
+Header One
+
+*/
+
+
+
+/*  headerTop  */
+
+
+
+
+
+
+
+.headerOne {}
+
+.headerOne .headerTopWrap {
+    background: #01416f;
+}
+
+.headerOne .searchIcon {
+    color: #f7941d;
+}
+
+.headerOne .searchIcon:hover {
+    color: #888888;
+}
+
+.headerOne .searchHolder label {
+    color: #01416f;
+}
+
+/*  socialMedia  */
+
+.headerOne .socialMediaLinksWrap a {
+    color: #f7941d;
+}
+
+/*  Menu Wrap  */
+
+.headerOne .mainMenu ul li:hover {
+    background: #f7941d;
+}
+
+.headerOne .mainMenu ul li:hover>a {
+    color: #ffffff;
+}
+
+.headerOne .mainMenu ul li ul li a:hover,
+.headerOne .mainMenu ul li ul li:hover {
+    color: #ffffff !important;
+}
+
+.headerOne .utilityMenu a {
+    color: #f7941d;
+}
+
+/*  Donate Button  */
+
+.headerOne .donateButton p a {}
+
+.headerOne .donateButton p a:hover {
+    color: #ffffff;
+    background: #01416f;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .headerOne .headerWrap.stuck {
+        background: #ffffff;
+    }
+
+}
+
+/*
+
+Header Two
+
+ */
+
+/*  headerTop  */
+
+.headerTwo .socialMediaLinksWrap a {
+    color: #01416f;
+}
+
+.headerTwo .socialMediaLinksWrap a:hover {
+    color: #888888;
+}
+
+/*  Header  */
+
+.headerTwo .headerWrap {
+    background: #efefef;
+}
+
+/*  Menu Wrap  */
+
+.headerTwo .mainMenu ul li:hover>a {
+    color: #888888;
+}
+
+.headerTwo .mainMenu ul li ul li:hover>a {
+    color: #ffffff;
+}
+
+.headerTwo .mainMenu ul li ul li a:hover,
+.headerTwo .mainMenu ul li ul li:hover {
+    color: #ffffff !important;
+}
+
+.headerTwo #responsive-menu-button {
+    background: #01416f;
+}
+
+.headerTwo #mobile-header #navIcon span {
+    background: #ffffff;
+}
+
+/*  Donate Button  */
+
+.headerTwo .donateButton p a {}
+
+.headerTwo .donateButton p a:hover {
+    color: #ffffff;
+    background: #01416f;
+}
+
+/*
+
+Header Three
+
+ */
+
+
+
+/*  socialMedia  */
+
+.headerThree .headerWrap {
+    background: #f7941d;
+}
+
+.headerThree .soLinkGen a {
+    color: #01416f;
+}
+
+.headerThree .soLinkGen a.square {
+    background: #01416f;
+    color: #ffffff;
+}
+
+.headerThree .soLinkGen a.circle {
+    background: #01416f;
+    color: #ffffff;
+}
+
+.headerThree .soLinkGen a:hover {
+    color: #f7941d;
+}
+
+/*  Utility Menu  */
+
+
+
+.headerThree .utilityMenu ul li a {
+    color: #01416f;
+}
+
+.headerThree .utilityMenu ul li a:hover {
+    color: #888888;
+}
+
+/*  Menu Wrap  */
+
+
+
+.headerThree .mainMenu ul li a,
+.headerThree .mainMenu ul li {
+    color: #01416f;
+}
+
+.headerThree .mainMenu ul li:hover a,
+.headerThree .mainMenu ul li:hover {
+    color: #ffffff !important;
+}
+
+.headerThree .mainMenu ul li:hover>a {
+    color: #ffffff;
+}
+
+.headerThree .mainMenu ul li ul li a:hover,
+.headerThree .mainMenu ul li ul li:hover {
+    color: #f7941d !important;
+}
+
+.headerThree .mainMenu ul li:hover {
+    background: #01416f;
+    color: #f7941d !important;
+}
+
+.headerThree .mainMenu ul li ul {
+    background: #01416f;
+}
+
+/*  Donate Button  */
+
+.headerThree .donateButton p a {}
+
+.headerThree .donateButton p a:hover {
+    color: #ffffff;
+    background: #01416f;
+}
+
+/*
+
+Header Four
+
+*/
+
+/*  Header  */
+
+.headerFour .headerWrap {
+    background: #01416f;
+}
+
+.headerFour .headerWrap.stuck {
+    background: #01416f;
+}
+
+
+
+
+
+
+
+/*  socialMedia  */
+
+
+
+.headerFour .socialMediaLinksWrap a {
+    color: #fff;
+}
+.headerFour .socialMediaLinksWrap a:hover {
+background:none !important;  color: #f7941d !important;
+}
+
+.headerFour .socialMediaLinksWrap a:hover {
+    color: #f7941d;
+}
+
+/*  Search  */
+
+.headerFour .searchIcon {
+    color: #fff;
+    font-size: 13pt;
+}
+
+.headerFour .searchIcon:hover {
+    color: #f7941d;
+}
+
+/*  Menu Wrap  */
+
+.headerFour .mainMenu ul li:hover {}
+
+.headerFour .mainMenu ul li:hover>a {
+    color: #fff;
+}
+
+.headerFour .mainMenu ul li ul li a:hover,
+.headerFour .mainMenu ul li ul li:hover {
+    color: #fff !important;
+}
+
+/*  Mobile Menu Icon  */
+
+.headerFour #mobile-header #navIcon span {
+    background: #ffffff;
+}
+
+/*  Donate Button  */
+
+.headerFour .donateButton p a {}
+
+.headerFour .donateButton p a:hover {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+/*
+
+Header Five
+
+*/
+
+
+
+/*  Header  */
+
+.headerFive .headerWrap {
+    background: #f7941d;
+}
+
+.headerFive .headerWrap.stuck {
+    background: #f7941d;
+}
+
+/*  socialMedia  */
+
+.headerFive .socialMediaLinksWrap a {
+    background: #ffffff;
+    color: #01416f;
+}
+
+.headerFive .socialMediaLinksWrap a:hover {
+    background: #ffffff;
+    color: #f7941d;
+}
+
+.headerFive .soLinkGen a {
+    color: #01416f;
+}
+
+.headerFive .soLinkGen a:hover {
+    color: #ffffff;
+}
+
+.headerFive .soLinkGen a.square {
+    background: #ffffff;
+    color: #01416f;
+}
+
+.headerFive .soLinkGen a.circle {
+    background: #ffffff;
+    color: #01416f;
+}
+
+.headerFive .soLinkGen a.square:hover {
+    color: #f7941d;
+}
+
+.headerFive .soLinkGen a.circle:hover {
+    color: #f7941d;
+}
+
+/*  Search  */
+
+.headerFive .searchIcon {
+    color: #01416f;
+}
+
+/*  Menu Wrap  */
+
+.headerFive .mainMenu ul li {
+    color: #01416f;
+}
+
+.headerFive .mainMenu ul li a {
+    color: #01416f;
+}
+
+.headerFive .mainMenu ul li:hover>a {
+    color: #ffffff;
+}
+
+.headerFive .mainMenu ul li ul {
+    background: #01416f;
+}
+
+.headerFive .mainMenu ul li ul li a {
+    color: #ffffff;
+}
+
+.headerFive .mainMenu ul li ul li:hover {
+    background: #f7941d;
+}
+
+/*  Mobile Menu Icon  */
+
+.headerFive #responsive-menu-button {
+    background: #01416f;
+}
+
+.headerFive #mobile-header #navIcon span {
+    background: #ffffff;
+}
+
+/*  Donate Button  */
+
+.headerFive .donateButton p a {}
+
+.headerFive .donateButton p a:hover {
+    color: #ffffff;
+    background: #01416f;
+}
+
+/*
+
+Header Six
+
+*/
+
+.headerSix .socialMediaLinksWrap a {
+    color: #ffffff;
+}
+
+.headerSix .socialMediaLinksWrap a:hover {
+    color: #ffffff;
+}
+
+/*  Menu Wrap  */
+
+.headerSix #responsive-menu-button {
+    background: #01416f;
+}
+
+.headerSix #mobile-header #navIcon span {
+    background: #ffffff;
+}
+
+/*  Donate Button  */
+
+.headerSix .donateButton p a {}
+
+.headerSix .donateButton p a:hover {
+    color: #ffffff;
+    background: #01416f;
+}
+
+/*
+
+Header Seven
+
+*/
+
+.headerSeven .headerWrap {
+    background: #efefef;
+}
+
+/*  Logo  */
+
+.headerSeven .logo {
+    background: #ffffff;
+}
+
+/*  Menu Wrap  */
+
+.headerSeven .mainMenu ul li:hover>a {
+    color: #888888;
+}
+
+.headerSeven .mainMenu ul li ul li:hover>a {
+    color: #ffffff;
+}
+
+/*  Utility Menu  */
+
+.headerSeven .utilityMenu ul li a {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.headerSeven .utilityMenu ul li:last-child a {
+    background: #ffffff;
+    color: #f7941d;
+}
+
+.headerSeven .utilityMenu ul li:hover a {
+    background: #01416f;
+}
+
+/*  Donate Button  */
+
+.headerSeven .donateButton p a {}
+
+.headerSeven .donateButton p a:hover {
+    color: #ffffff;
+    background: #01416f;
+}
+
+
+
+@media (max-width: 768px) {
+
+    /*  Header  */
+
+    .headerSeven {
+        background: #ffffff;
+    }
+
+}
+
+/*
+
+Header Eight
+
+*/
+
+/*  socialMedia  */
+
+
+
+.headerEight .soLinkGen a {
+    color: #01416f;
+}
+
+.headerEight .soLinkGen a.square {
+    background: #01416f;
+    color: #ffffff;
+}
+
+.hheaderEight .soLinkGen a.circle {
+    background: #01416f;
+    color: #ffffff;
+}
+
+.headerEight .soLinkGen a:hover {
+    color: #f7941d;
+}
+
+/*  Utility Menu  */
+
+
+
+.headerEight .utilityMenu ul li a {
+    color: #01416f;
+}
+
+.headerEight .utilityMenu ul li a:hover {
+    color: #f7941d
+}
+
+/*  Menu Wrap  */
+
+.headerEight #responsive-menu-button {
+    background: #01416f;
+}
+
+.headerEight #mobile-header #navIcon span {
+    background: #ffffff;
+}
+
+/*  Donate Button  */
+
+.headerEight .donateButton p a {}
+
+.headerEight .donateButton p a:hover {
+    background: #ffffff;
+    background: #01416f;
+}
+
+/*
+
+Footer One
+
+*/
+
+
+
+.footerOne .footerWrap {
+    border-top: 1px solid #efefef;
+}
+
+.footerOne .footer p {
+    color: #01416f;
+}
+
+.footerOne .footer h2,
+.footerOne .footer h3,
+.footerOne .footer h4,
+.footerOne .footer h5,
+.footerOne .footer h6 {
+    color: #01416f;
+}
+
+.footerOne .footer a {
+    color: #f7941d;
+}
+
+.footerOne .footer a:hover {
+    color: #888888;
+}
+
+.footerOne .footer .soLinkGen a.square {
+    background: #f7941d;
+    color: #01416f;
+}
+
+.footerOne .footer .soLinkGen a.square:hover {
+    background: #01416f;
+    color: #f7941d;
+}
+
+.footerOne .footer .soLinkGen a.circle {
+    background: #f7941d;
+    color: #01416f;
+}
+
+.footerOne .footer .soLinkGen a.circle:hover {
+    background: #01416f;
+    color: #f7941d;
+}
+
+/* copyright */
+
+.footerOne .copyrightWrap {
+    background: #01416f;
+}
+
+.footerOne .copyright p {
+    color: #ffffff;
+}
+
+.footerOne .copyright a {
+    color: #ffffff;
+}
+
+.footerOne .copyright a:hover {
+    color: #888888;
+}
+
+/*
+
+Footer  Two
+
+*/
+
+.footerTwo .footerWrap {
+    background: #01416f;
+}
+
+.footerTwo .footer p {
+    color: #ffffff;
+}
+
+.footerTwo .footer h2,
+.footerTwo .footer h3,
+.footerTwo .footer h4,
+.footerTwo .footer h5,
+.footerTwo .footer h6 {
+    color: #ffffff;
+}
+
+.footerTwo .footer a {
+    color: #ffffff;
+}
+
+.footerTwo .footer a:hover {
+    color: #efefef;
+}
+
+/* copyright */
+
+.footerTwo .copyrightWrap {
+    background: #f7941d;
+}
+
+.footerTwo .copyright p {
+    color: #01416f;
+}
+
+.footerTwo .copyright a {
+    color: #01416f;
+}
+
+.footerTwo .copyright a:hover {
+    color: #ffffff;
+}
+
+/*
+
+Footer  Three
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+.footerThree {}
+
+.footerThree .footerWrap {
+    background: #01416f;
+}
+
+.footerThree .footer p {
+    color: #ffffff;
+}
+
+.footerThree .footer h2,
+.footerThree .footer h3,
+.footerThree .footer h4,
+.footerThree .footer h5,
+.footerThree .footer h6 {
+    color: #ffffff;
+}
+
+.footerThree .footer a {
+    color: #ffffff;
+}
+
+.footerThree .footer a:hover {
+    color: #efefef;
+}
+
+.footerThree .socialMediaFooter span {
+    background: #888888;
+    color: #ffffff;
+}
+
+/* copyright */
+
+.footerThree .copyrightWrap {
+    background: #f7941d;
+}
+
+.footerThree .copyright p {
+    color: #ffffff;
+}
+
+.footerThree .copyright a {
+    color: #ffffff;
+}
+
+.footerThree .copyright a:hover {
+    color: #efefef;
+}
+
+.footerThree .footer .soLinkGen a {
+    color: #01416f;
+}
+
+/*
+
+Footer Four
+
+*/
+
+.footerFour .footerWrap {
+    background: #333;
+}
+
+.footerFour .footer p {
+    /* color: #01416f; */
+    color: #fff;
+}
+
+.footerFour .footer h2,
+.footerFour .footer h3,
+.footerFour .footer h4,
+.footerFour .footer h5,
+.footerFour .footer h6 {
+    /* color: #01416f; */
+    color: #fff;
+}
+
+.footerFour .footer a {}
+
+.footerFour .footer a:hover {}
+
+/* copyright */
+
+.footerFour .copyrightWrap {
+    background: #f7941d;
+}
+
+.footerFour .copyright p {
+    color: #01416f;
+}
+
+.footerFour .copyright a {
+    color: #01416f;
+}
+
+.footerFour .copyright a:hover {
+    color: #ffffff;
+}
+
+/*
+
+Footer Five
+
+*/
+
+.footerFive .footerWrap {
+    background: #efefef;
+}
+
+.footerFive .footer p {
+    color: #01416f;
+}
+
+.footerFive .footer h2,
+.footerFive .footer h3,
+.footerFive .footer h4,
+.footerFive .footer h5,
+.footerFive .footer h6 {
+    color: #01416f;
+}
+
+.footerFive .footer a {}
+
+.footerFive .footer a:hover {}
+
+.footerFive .toTop {
+    color: #01416f;
+    background: #efefef;
+}
+
+/*
+
+ Footer  Six
+
+ */
+
+.footerSix {}
+
+.footerSix .footerWrap {
+    background: #efefef;
+}
+
+.footerSix .footer p {
+    color: #01416f;
+}
+
+.footerSix .footer h2,
+.footerSix .footer h3,
+.footerSix .footer h4,
+.footerSix .footer h5,
+.footerSix .footer h6 {
+    color: #f7941d;
+}
+
+.footerSix .footer a {}
+
+.footerSix .footer a:hover {}
+
+/* copyright */
+
+.footerSix .copyrightWrap {
+    background: #f7941d;
+}
+
+.footerSix .copyright p {
+    color: #01416f;
+}
+
+.footerSix .copyright a {
+    color: #01416f;
+}
+
+.footerSix .copyright a:hover {
+    color: #ffffff;
+}
+
+/*
+
+ Footer  Seven
+
+ */
+
+
+
+.footerSeven {}
+
+.footerSeven .footerWrap {
+    background: #f7941d;
+}
+
+.footerSeven .footer p {
+    color: #ffffff;
+}
+
+.footerSeven .footer h2,
+.footerSeven .footer h3,
+.footerSeven .footer h4,
+.footerSeven .footer h5,
+.footerSeven .footer h6 {
+    color: #ffffff;
+}
+
+.footerSeven .footer a {
+    color: #efefef;
+}
+
+.footerSeven .footer a:hover {
+    color: #ffffff;
+}
+
+/*
+
+ Footer  Eight
+
+ */
+
+.footerEight {}
+
+.footerEight .footerWrap {
+    background: #f7941d;
+}
+
+.footerEight .footer p {
+    color: #ffffff;
+}
+
+.footerEight .footer h2,
+.footerEight .footer h3,
+.footerEight .footer h4,
+.footerEight .footer h5,
+.footerEight .footer h6 {
+    color: #ffffff;
+}
+
+.footerEight .footer a {
+    color: #efefef;
+}
+
+.footerEight .footer a:hover {
+    color: #ffffff;
+}
+
+/* copyright */
+
+.footerEight .copyrightWrap {
+    background: #efefef;
+}
+
+.footerEight .copyright p {
+    color: #f7941d;
+}
+
+.footerEight .copyright a {
+    color: #f7941d;
+}
+
+.footerEight .copyright a:hover {
+    color: #efefef;
+}
+
+/* CTA One  */
+
+.callToActionWrap.one {
+    background: #01416f;
+}
+
+.callToActionWrap.one .callToAction h1,
+.callToActionWrap.one .callToAction h2,
+.callToActionWrap.one .callToAction h3,
+.callToActionWrap.one .callToAction h4,
+.callToActionWrap.one .callToAction h5,
+.callToActionWrap.one .callToAction h6,
+.callToActionWrap.one .callToAction p {
+    color: #ffffff;
+}
+
+/* CTA Two  */
+
+.callToActionWrap.two {
+    background: #01416f;
+}
+
+.callToActionWrap.two .callToAction h1,
+.callToActionWrap.two .callToAction h2,
+.callToActionWrap.two .callToAction h3,
+.callToActionWrap.two .callToAction h4,
+.callToActionWrap.two .callToAction h5,
+.callToActionWrap.two .callToAction h6,
+.callToActionWrap.two .callToAction p {
+    color: #ffffff;
+}
+
+
+
+.water {
+    background: url(/images/water.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.callToActionWrap.two.clear {
+    background: rgba(1, 65, 111, .8)
+}
+
+
+
+
+
+
+
+/* CTA Three  */
+
+.callToActionWrap.three .callToAction {
+    margin: 0 auto;
+    background: #01416f;
+}
+
+.callToActionWrap.three .ctaRight {}
+
+.callToActionWrap.three .ctaRight h1,
+.callToActionWrap.three .ctaRight h2,
+.callToActionWrap.three .ctaRight h3,
+.callToActionWrap.three .ctaRight h4,
+.callToActionWrap.three .ctaRight h5,
+.callToActionWrap.three .ctaRight h6,
+.callToActionWrap.three .ctaRight p {
+    color: #ffffff;
+}
+
+/* CTA Four  */
+
+.callToActionWrap.four {
+    width: 100%;
+    background: url(/get/files/image/galleries/community-stock-10.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.callToActionWrap.four .callToActionInner {
+    background: rgba(0, 0, 0, .6);
+}
+
+.callToActionWrap.four .callToAction h1,
+.callToActionWrap.four .callToAction h2,
+.callToActionWrap.four .callToAction h3,
+.callToActionWrap.four .callToAction h4,
+.callToActionWrap.four .callToAction h5,
+.callToActionWrap.four .callToAction h6,
+.callToActionWrap.four .callToAction p {
+    color: #ffffff;
+}
+
+.callToActionWrap.four .button.border p a {
+    background: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.callToActionWrap.four .button.border p a:hover {
+    background: #f7941d;
+    color: #ffffff;
+    border: 1px solid #f7941d;
+}
+
+/* CTA Five  */
+
+.callToActionWrap.five {
+    width: 100%;
+    background: url(/get/files/image/galleries/community-stock-9.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.callToActionWrap.five .callToActionInner {
+    background: rgba(0, 0, 0, .6);
+}
+
+.callToActionWrap.five .callToAction h1,
+.callToActionWrap.five .callToAction h2,
+.callToActionWrap.five .callToAction h3,
+.callToActionWrap.five .callToAction h4,
+.callToActionWrap.five .callToAction h5,
+.callToActionWrap.five .callToAction h6,
+.callToActionWrap.five .callToAction p {
+    color: #ffffff;
+}
+
+/* Slider One */
+
+.sliderOne .captionContainer h2 {
+    color: #01416f;
+}
+
+.sliderOne .captionContainer p {
+    color: #01416f;
+}
+
+.sliderOne .captionContainer p a {
+    color: #01416f;
+}
+
+.sliderOne .captionContainer .button p a {
+    background: #f7941d;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.sliderOne .captionContainer .button p a:hover {
+    background: rgba(159, 216, 237, 1) !important;
+    color: #01416f !important;
+}
+
+.sliderOne .owl-page {
+    border: 1px solid #f7941d;
+}
+
+.sliderOne .owl-page.active {
+    background: #f7941d;
+}
+
+/* Slider Two */
+
+.sliderTwo .captionContainer {
+    background: rgba(255, 255, 255, .6)
+}
+
+.sliderTwo .captionContainer h2 {
+    color: #01416f;
+}
+
+.sliderTwo .captionContainer p {
+    color: #01416f;
+}
+
+.sliderTwo .captionContainer p a {
+    color: #01416f;
+}
+
+.sliderTwo .captionContainer .button p a {
+    background: #f7941d;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.sliderTwo .captionContainer .button p a:hover {
+    background: rgba(159, 216, 237, 1) !important;
+    color: #01416f !important;
+}
+
+.sliderTwo .owl-page {
+    border: 1px solid #f7941d;
+}
+
+.sliderTwo .owl-page.active {
+    background: #f7941d;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .sliderTwo .captionContainer {
+        background: #efefef;
+    }
+
+}
+
+/* Slider Three */
+
+.sliderThree .captionContainer {
+    background: rgba(0, 0, 0, .6);
+}
+
+.sliderThree .captionContainer h2 {
+    color: #ffffff;
+}
+
+.sliderThree .captionContainer p {
+    color: #ffffff;
+}
+
+.sliderThree .captionContainer p a {
+    color: #ffffff;
+}
+
+.sliderThree .captionContainer .button p a {
+    background: #f7941d;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.sliderThree .captionContainer .button p a:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+.sliderThree .owl-page {
+    border: 1px solid #f7941d;
+}
+
+.sliderThree .owl-page.active {
+    background: #f7941d;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .sliderThree .captionContainer {
+        background: rgba(77, 77, 77, 1);
+    }
+
+}
+
+/* Slider Four */
+
+
+
+.sliderFour .caption {
+    background: rgba(0, 0, 0, .2);
+}
+
+.sliderFour .captionContainer h1 {
+    color: #ffffff;
+}
+
+.sliderFour .captionContainer p {
+    color: #ffffff;
+}
+
+.sliderFour .captionContainer p a {
+    color: #ffffff;
+}
+
+.sliderFour .captionContainer .button p a {
+    background: #f7941d;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.sliderFour .captionContainer .button p a:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+.sliderFour .owl-page {
+    border: 1px solid #ffffff;
+}
+
+.sliderFour .owl-page.active {
+    background: #ffffff;
+}
+
+.sliderFour .owl-controls {
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .sliderFour .captionContainer {
+        background: rgba(77, 77, 77, 1);
+    }
+
+}
+
+/* Slider Five */
+
+.sliderFive .caption {
+    background: #01416f;
+}
+
+.sliderFive .captionContainer h2 {
+    color: #ffffff;
+}
+
+.sliderFive .captionContainer p {
+    color: #ffffff;
+}
+
+.sliderFive .captionContainer p a {
+    color: #ffffff;
+}
+
+.sliderFive .captionContainer .button p a {
+    background: #f7941d;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.sliderFive .captionContainer .button p a:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+.sliderFive .owl-page {
+    border: 1px solid #efefef;
+}
+
+.sliderFive .owl-page.active {
+    background: #efefef;
+}
+
+/* Slider Six */
+
+.sliderSix .caption {
+    background: rgba(0, 0, 0, .6)
+}
+
+.sliderSix .captionContainer h3 {
+    color: #ffffff;
+}
+
+.sliderSix .captionContainer p {
+    color: #ffffff;
+}
+
+.sliderSix .captionContainer p a {
+    color: #ffffff;
+}
+
+.sliderSix .captionContainer .button p a {
+    background: #f7941d;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.sliderSix .captionContainer .button p a:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+.sliderSix .owl-page {
+    border: 1px solid #f7941d;
+}
+
+.sliderSix .owl-page.active {
+    background: #f7941d;
+}
+
+/* Slider Seven */
+
+.sliderSeven .captionContainer {
+    background: rgba(255, 255, 255, .9);
+}
+
+.sliderSeven .captionContainer h2 {
+    color: #01416f;
+}
+
+.sliderSeven .captionContainer p {
+    color: #01416f;
+}
+
+.sliderSeven .captionContainer p a {
+    color: #ffffff;
+}
+
+.sliderSeven .captionContainer .button p a {
+    background: #f7941d;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.sliderSeven .captionContainer .button p a:hover {
+    background: rgba(159, 216, 237, 1) !important;
+    color: #01416f !important;
+}
+
+.sliderSeven .owl-page {
+    border: 1px solid #f7941d;
+}
+
+.sliderSeven .owl-page.active {
+    background: #f7941d;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .sliderSeven .captionContainer {
+        background: rgba(1, 65, 111, .1) !important;
+    }
+
+}
+
+/* Testimonial One */
+
+
+
+.testimonialWrapOne {
+    background: url(/get/files/image/galleries/International3.jpg) center center no-repeat;
+}
+
+.testimonialWrapOne .slider {
+    background: rgba(0, 0, 0, .7);
+}
+
+.testimonialWrapOne .testimonial h2 {
+    color: #ffffff;
+}
+
+.testimonialWrapOne .testimonial p b,
+.testimonialWrapOne .testimonial p strong {
+    color: #efefef;
+}
+
+.testimonialWrapOne .owl-page {
+    border: 1px solid #f7941d;
+}
+
+.testimonialWrapOne .owl-page.active {
+    background: #f7941d;
+}
+
+/* Testimonial Two */
+
+.testimonialWrapTwo {
+    width: 100%;
+    background: url(/get/files/image/galleries/International3.jpg) center center no-repeat;
+    background-size: cover
+}
+
+.testimonialWrapTwo .slider {
+    background: rgba(0, 0, 0, .7);
+}
+
+.testimonialWrapTwo .testimonial h2 {
+    color: #ffffff;
+}
+
+.testimonialWrapTwo .testimonial p {
+    color: #ffffff;
+}
+
+.testimonialWrapTwo .testimonial p b,
+.testimonialWrapTwo .testimonial p strong {
+    color: #efefef;
+}
+
+.testimonialWrapTwo .owl-page {
+    border: 1px solid #f7941d;
+}
+
+.testimonialWrapTwo .owl-page.active {
+    background: #f7941d;
+}
+
+.testimonialWrapTwo .owl-controls {
+    margin: 0 auto;
+}
+
+/* Testimonial Three */
+
+.testimonialWrapThree .owl-page {
+    border: 1px solid #f7941d;
+}
+
+.testimonialWrapThree .owl-page.active {
+    background: #f7941d;
+}
+
+/* Testimonial Four */
+
+.testimonialWrapFour {
+    background: #01416f;
+}
+
+.testimonialWrapFour .testimonial {
+    max-width: 600px;
+}
+
+.testimonialWrapFour .testimonial h2 {
+    color: #ffffff;
+}
+
+.testimonialWrapFour .testimonial p {
+    color: #ffffff;
+}
+
+.testimonialWrapFour .testimonial p b,
+.testimonialWrapFive .testimonial p strong {
+    color: #ffffff;
+}
+
+.testimonialWrapFour .owl-page {
+    border: 1px solid #f7941d;
+}
+
+.testimonialWrapFour .owl-page.active {
+    background: #f7941d;
+}
+
+/* Testimonial Five */
+
+.testimonialWrapFive .slider {
+    background: #01416f;
+}
+
+.testimonialWrapFive .testimonial h2 {
+    color: #ffffff;
+}
+
+.testimonialWrapFive .testimonial p {
+    color: #ffffff;
+}
+
+.testimonialWrapFive .testimonial p b,
+.testimonialWrapFive .testimonial p strong {
+    color: #ffffff;
+}
+
+.testimonialWrapFive .owl-page {
+    border: 1px solid #f7941d;
+}
+
+.testimonialWrapFive .owl-page.active {
+    background: #f7941d;
+}
+
+.testimonialWrapFive .owl-controls {
+    margin: 0 auto;
+    padding: 5px 0 0;
+}
+
+/*
+
+Landing Header One
+
+*/
+
+/*  socialMedia  */
+
+.landingHeaderOne .soLinkGen a {
+    color: #f7941d;
+}
+
+
+
+.landingHeaderOne .soLinkGen a:hover {
+    color: #888888;
+}
+
+.landingHeaderOne .soLinkGen a.small.circle {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.landingHeaderOne .soLinkGen a.small.circle:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+.landingHeaderOne .soLinkGen a.small.square {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.landingHeaderOne .soLinkGen a.small.square:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+/*  Header  */
+
+.landingHeaderOne .headerWrap {
+    background: #efefef;
+}
+
+/*  Donate Button  */
+
+.landingHeaderOne .donateButton p a {
+    color: #ffffff;
+    background: #f7941d;
+}
+
+.landingHeaderOne .donateButton p a:hover {
+    color: #ffffff;
+    background: #f7941d;
+}
+
+/*
+
+Landing Header Two
+
+*/
+
+/*  Header  */
+
+.landingHeaderTwo .headerWrap {
+    background: #efefef;
+}
+
+/*  Donate Button  */
+
+.landingHeaderTwo .donateButton p a {
+    color: #ffffff;
+    background: #f7941d;
+}
+
+.landingHeaderTwo .donateButton p a:hover {
+    color: #ffffff;
+    background: #f7941d;
+}
+
+/*
+
+Landing Footer One
+
+*/
+
+
+
+/* copyright */
+
+.landingFooterOne .copyrightWrap {
+    background: #efefef;
+}
+
+.landingFooterOne .copyright p {
+    color: #f7941d;
+}
+
+.landingFooterOne .copyright a {
+    color: #f7941d;
+}
+
+.landingFooterOne .copyright a:hover {
+    color: #efefef;
+}
+
+/*  socialMedia  */
+
+.landingFooterOne .socialMediaLinksWrap a {
+    background: #888888;
+    color: #ffffff;
+}
+
+.landingFooterOne .socialMediaLinksWrap a:hover {
+    color: #f7941d;
+}
+
+.landingFooterOne .soLinkGen a {
+    color: #f7941d;
+}
+
+.landingFooterOne .soLinkGen a:hover {
+    color: #888888;
+}
+
+.landingFooterOne .soLinkGen a.small.circle {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.landingFooterOne .soLinkGen a.small.circle:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+.landingFooterOne .soLinkGen a.small.square {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.landingFooterOne .soLinkGen a.small.square:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+/*
+
+Landing Footer Two
+
+*/
+
+
+
+/* copyright */
+
+.landingFooterTwo .footerWrap {
+    background: #efefef;
+}
+
+.landingFooterTwo .copyright p {
+    color: #f7941d;
+}
+
+.landingFooterTwo .copyright a {
+    color: #f7941d;
+}
+
+.landingFooterTwo .copyright a:hover {
+    color: #efefef;
+}
+
+/*  socialMedia  */
+
+.landingFooterTwo .socialMediaLinksWrap a {
+    background: #888888;
+    color: #ffffff;
+}
+
+.landingFooterTwo .socialMediaLinksWrap a:hover {
+    color: #f7941d;
+}
+
+.landingFooterTwo .soLinkGen a {
+    color: #f7941d;
+}
+
+.landingFooterTwo .soLinkGen a:hover {
+    color: #888888;
+}
+
+.landingFooterTwo .soLinkGen a.small.circle {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.landingFooterTwo .soLinkGen a.small.circle:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+.landingFooterTwo .soLinkGen a.small.square {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.landingFooterTwo .soLinkGen a.small.square:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+/* Donations */
+
+
+
+
+
+
+
+/* Donation Form Two */
+
+.donateWrap.two .btnWrap input {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.donateWrap.two .btnWrap input:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+/* Donation Form Three */
+
+.donateWrap.three .btnWrap input {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.donateWrap.three .btnWrap input:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+.donateWrap.three .donateWrap h5,
+.donateWrap.three .donateWrap p {}
+
+.donateWrap.three #output1 {
+    color: #01416f;
+}
+
+/* Donation Form Four */
+
+.donateWrap.four .btnWrap input {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.donateWrap.four .btnWrap input:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+/* Donation Form Five */
+
+.donationBannerWrap .donationBanner table.Dialog select {
+    color: #f7941d;
+}
+
+.donationBannerWrap .btnWrap input {
+    background: #f7941d;
+    color: #ffffff;
+}
+
+.donationBannerWrap .btnWrap input:hover {
+    background: #888888;
+    color: #ffffff;
+}
+
+.donationBannerWrap h5,
+.donationBannerWrap p {}
+
+
+
+/* Sidr Responsive Menu Styles*/
+
+.sidr ul li.active,
+.sidr ul li.sidr-class-active,
+.sidr ul li:hover {
+    background: #f7941d !important;
+    color: #01416f !important;
+}
+
+.sidr ul li.active a,
+.sidr ul li:hover a {
+    color: #01416f;
+}
+
+.sidr ul li ul li.active>a,
+.sidr ul li ul li.active>span,
+.sidr ul li ul li.sidr-class-active>a,
+.sidr ul li ul li.sidr-class-active>span,
+.sidr ul li ul li:hover>a,
+.sidr ul li ul li:hover>span {
+    background: #01416f !important;
+    color: #fff
+}
+
+
+
+/* Map */
+
+.mapDetails {
+    color: #f7941d;
+}
+
+.sidr-class-soLinkGen a:hover {
+    background: #f7941d !important;
+}
+
+
+
+
+
+
+
+.headerWrap p,
+.headerWrap li,
+.headerWrap ol,
+label,
+.mainContentArea p,
+.mainContentArea li,
+.mainContentArea ol,
+.slider p,
+.slider li,
+.slider ol,
+.callToActionWrap p,
+.callToActionWrap li,
+.callToActionWrap ol,
+.footerWrap p,
+.footerWrap li,
+.footerWrap ol,
+.videoBannerText,
+.videoBannerText p,
+.Dialog .mwInput.button input.mw,
+.btnWrap input,
+.Dialog input,
+.Dialog TEXTAREA,
+.Dialog SELECT,
+.Dialog .mwInput .value,
+.mainContentArea table tr td,
+.mainContentArea table tr th,
+.footer p,
+.copyright p,
+table.Dialog select,
+.sidr ul li a,
+.sidr ul li span,
+.mainContentArea h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+}
+
+.headerWrap h1,
+.headerWrap h2,
+.headerWrap h3,
+.headerWrap h4,
+.headerWrap h5,
+.headerWrap h6,
+.slider h1,
+.slider h2,
+.slider h3,
+.slider h4,
+.slider h5,
+.slider h6,
+.videoBanner h2,
+.mainContentArea h1,
+.mainContentArea h2,
+.mainContentArea h3,
+.mainContentArea h4,
+.mainContentArea h5,
+.callToActionWrap h1,
+.callToActionWrap h2,
+.callToActionWrap h3,
+.callToActionWrap h4,
+.callToActionWrap h5,
+.callToActionWrap h6,
+.footerWrap h1,
+.footerWrap h2,
+.footerWrap h3,
+.footerWrap h4,
+.footerWrap h5,
+.footerWrap h6,
+.stickyDonate a,
+.donateButton p a,
+.button p a,
+.Dialog .mwInput.Button input.mw,
+.btnWrap input,
+.sidebarSearch label,
+.searchHolder label,
+.twoColumn a.colContentbtn,
+.dollarSign,
+.donationBannerInner input.mwFormSubmit,
+.captionContainer .button p a,
+.headerSeven .utilityMenu ul li a {
+    font-family: Advocate-C65-Regular;
+}
+
+
+
+
+
+
+
+@media (max-width: 950px) {
+
+    .headerFour .headerWrap {
+
+background: #01416f !important;
+
+}
+
+
+
+}
+
+
+
+.sideMenu p {}
+
+.sideMenu p a {
+    text-decoration: none;
+    line-height: 19pt;
+}
+
+.sideMenu p a:before {
+    content: "• ";
+    font-size: 12pt;
+}
+
+.blogPostTeacherPage .customEmailArea > a {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+}
+
+.blogPostTeacherPage .customEmailArea > a > span {
+    font-size: 14px;
+    margin: 0 5px 0 0;
+}
+
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Video Player One - Start
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+.videoPlayerOne {
+  margin-bottom: 30px;
+}
+
+.videoPlayerOne .videoPlayerWrap {
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+}
+
+.videoPlayerOne .videoCover {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+
+.videoPlayerOne .videoCover:hover .coverPlayBtn {
+  color: white;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.videoPlayerOne .coverInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.videoPlayerOne .coverPlayBtn {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 60px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
+  font-style: normal;
+}
+
+.videoPlayerOne video {
+  opacity: 0;
+  display: block;
+  width: 100%;
+}
+
+.videoPlayerOne .videoBar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+}
+
+.videoPlayerOne .videoBar .barOuter {
+  padding: 4px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.videoPlayerOne .videoBar .barInner {
+  height: 6px;
+  border-radius: 50px;
+  background-color: var(--color-primary);
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
+}
+
+/*
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Video Player One - End
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/

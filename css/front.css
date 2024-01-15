@@ -1,0 +1,167 @@
+
+.mwPageBlock,
+.mwPageArea {
+	padding			: 0px;
+	clear			: both;
+}
+
+.mwPageBlock {
+	position		: relative;
+	margin			: 0px !important;
+	padding			: 0px !important;
+}
+
+.mwPageBlock .blockContents:after {
+	content			: '';
+	display			: block;
+	clear			: both;
+}
+
+.mwPageBlock.Float {
+	float			: left;
+	clear			: none;
+}
+
+.mwPageBlock.Float.rowHost {
+	clear			: both;
+}
+
+.mwPageBlock.Embed .Container>*:not(script):not(style):not(link) {
+	display			: block;
+	margin			: auto;
+}
+
+.mwPageBlock .mwFileEmbed {
+	display			: block;
+	margin			: auto;
+	text-align		: center;
+}
+
+
+/* ---- Size Definition ---- */
+
+	DIV.mwPageBlock>.blockContents.pad-top-s {
+		padding-top		: 15px; 
+	}
+
+	DIV.mwPageBlock>.blockContents.pad-bottom-s {
+		padding-bottom		: 15px; 
+	}
+
+	DIV.mwPageBlock:not(.Float)>.blockContents.pad-left-s {
+		padding-left		: 15px; 
+	}
+
+	DIV.mwPageBlock:not(.Float)>.blockContents.pad-right-s {
+		padding-right		: 15px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.pad-middle-s:not(.rowStart) {
+		padding-left		: 15px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.pad-middle-s:not(.rowEnd) {
+		padding-right		: 15px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.rowStart.pad-left-s {
+		padding-left		: 15px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.rowEnd.pad-right-s {
+		padding-right		: 15px; 
+	}
+
+	
+
+/* ---- Size Definition ---- */
+
+	DIV.mwPageBlock>.blockContents.pad-top-m {
+		padding-top		: 30px; 
+	}
+
+	DIV.mwPageBlock>.blockContents.pad-bottom-m {
+		padding-bottom		: 30px; 
+	}
+
+	DIV.mwPageBlock:not(.Float)>.blockContents.pad-left-m {
+		padding-left		: 30px; 
+	}
+
+	DIV.mwPageBlock:not(.Float)>.blockContents.pad-right-m {
+		padding-right		: 30px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.pad-middle-m:not(.rowStart) {
+		padding-left		: 30px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.pad-middle-m:not(.rowEnd) {
+		padding-right		: 30px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.rowStart.pad-left-m {
+		padding-left		: 30px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.rowEnd.pad-right-m {
+		padding-right		: 30px; 
+	}
+
+	
+
+/* ---- Size Definition ---- */
+
+	DIV.mwPageBlock>.blockContents.pad-top-l {
+		padding-top		: 45px; 
+	}
+
+	DIV.mwPageBlock>.blockContents.pad-bottom-l {
+		padding-bottom		: 45px; 
+	}
+
+	DIV.mwPageBlock:not(.Float)>.blockContents.pad-left-l {
+		padding-left		: 45px; 
+	}
+
+	DIV.mwPageBlock:not(.Float)>.blockContents.pad-right-l {
+		padding-right		: 45px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.pad-middle-l:not(.rowStart) {
+		padding-left		: 45px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.pad-middle-l:not(.rowEnd) {
+		padding-right		: 45px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.rowStart.pad-left-l {
+		padding-left		: 45px; 
+	}
+
+	DIV.mwPageBlock.Float>.blockContents.rowEnd.pad-right-l {
+		padding-right		: 45px; 
+	}
+
+	
+
+/* ---- Responsive ---- */
+
+@media screen and (max-width: 768px) {
+
+.mwPageBlock.Float 
+{
+	float				: none;
+
+	width				: auto !important;
+	height				: auto !important;
+	min-height			: 0 !important;
+}
+
+.mwPageBlock>.blockContents 
+{
+	padding				: 0px !important;
+}
+
+}

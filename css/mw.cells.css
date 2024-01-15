@@ -1,0 +1,84 @@
+
+/* General cells definition: float and auto combinations */
+.cell { float : left; }
+.cell-left { float : left; }
+.cell-right { float : right; }
+.cell-auto { float : none; clear:none; width:auto }
+
+.cell-5 { clear:none !important; float : left; width : 5%;  }
+.cell-10 { clear:none !important; float : left; width : 10%;  }
+.cell-15 { clear:none !important; float : left; width : 15%;  }
+.cell-20 { clear:none !important; float : left; width : 20%;  }
+.cell-25 { clear:none !important; float : left; width : 25%;  }
+.cell-30 { clear:none !important; float : left; width : 30%;  }
+.cell-35 { clear:none !important; float : left; width : 35%;  }
+.cell-40 { clear:none !important; float : left; width : 40%;  }
+.cell-45 { clear:none !important; float : left; width : 45%;  }
+.cell-50 { clear:none !important; float : left; width : 50%;  }
+.cell-55 { clear:none !important; float : left; width : 55%;  }
+.cell-60 { clear:none !important; float : left; width : 60%;  }
+.cell-65 { clear:none !important; float : left; width : 65%;  }
+.cell-70 { clear:none !important; float : left; width : 70%;  }
+.cell-75 { clear:none !important; float : left; width : 75%;  }
+.cell-80 { clear:none !important; float : left; width : 80%;  }
+.cell-85 { clear:none !important; float : left; width : 85%;  }
+.cell-90 { clear:none !important; float : left; width : 90%;  }
+.cell-95 { clear:none !important; float : left; width : 95%;  }
+.cell-100 { clear:none !important; float : left; width : 100%;  }
+.cell-33 { clear:none !important; float : left; width : 33.33%; }
+.cell-66 { clear:none !important; float : left; width : 66.66%; }
+.cell-16 { clear:none !important; float : left; width : 16.66%; }
+
+.cell-100 { clear:both !important; float : none; }
+
+
+/* Adding even width cells support, based on siblings count */
+/* Supporting up to 10 columns, that's more than sufficient in real life */
+.cell-even {
+	float : left !important;
+	clear : none !important;
+}
+.cell-even:first-child:nth-last-child(1), .cell-even:first-child:nth-last-child(1) ~ .cell-even { width : 100% !important; }
+.cell-even:first-child:nth-last-child(2), .cell-even:first-child:nth-last-child(2) ~ .cell-even { width : 50% !important; }
+.cell-even:first-child:nth-last-child(3), .cell-even:first-child:nth-last-child(3) ~ .cell-even { width : 33.33% !important; }
+.cell-even:first-child:nth-last-child(4), .cell-even:first-child:nth-last-child(4) ~ .cell-even { width : 25% !important; }
+.cell-even:first-child:nth-last-child(5), .cell-even:first-child:nth-last-child(5) ~ .cell-even { width : 20% !important; }
+.cell-even:first-child:nth-last-child(6), .cell-even:first-child:nth-last-child(6) ~ .cell-even { width : 16.66% !important; }
+.cell-even:first-child:nth-last-child(7), .cell-even:first-child:nth-last-child(7) ~ .cell-even { width : 14.28% !important; }
+.cell-even:first-child:nth-last-child(8), .cell-even:first-child:nth-last-child(8) ~ .cell-even { width : 12.5% !important; }
+.cell-even:first-child:nth-last-child(9), .cell-even:first-child:nth-last-child(9) ~ .cell-even { width : 11.11% !important; }
+.cell-even:first-child:nth-last-child(10), .cell-even:first-child:nth-last-child(10) ~ .cell-even { width : 10% !important; }
+
+/*/
+.cell-even:first-child:nth-last-child(1),
+.cell-even:first-child:nth-last-child(1) ~ .cell-even
+{ clear:none !important; float : left; width : 100% !important; }
+.cell-even:first-child:nth-last-child(2),
+.cell-even:first-child:nth-last-child(2) ~ .cell-even
+{ clear:none !important; float : left; width : 50% !important; }
+.cell-even:first-child:nth-last-child(3),
+.cell-even:first-child:nth-last-child(3) ~ .cell-even
+{ clear:none !important; float : left; width : 33.33% !important; }
+.cell-even:first-child:nth-last-child(4),
+.cell-even:first-child:nth-last-child(4) ~ .cell-even
+{ clear:none !important; float : left; width : 25% !important; }
+.cell-even:first-child:nth-last-child(5),
+.cell-even:first-child:nth-last-child(5) ~ .cell-even
+{ clear:none !important; float : left; width : 20% !important; }
+.cell-even:first-child:nth-last-child(6),
+.cell-even:first-child:nth-last-child(6) ~ .cell-even
+{ clear:none !important; float : left; width : 16.66% !important; }
+.cell-even:first-child:nth-last-child(7),
+.cell-even:first-child:nth-last-child(7) ~ .cell-even
+{ clear:none !important; float : left; width : 14.28% !important; }
+.cell-even:first-child:nth-last-child(8),
+.cell-even:first-child:nth-last-child(8) ~ .cell-even
+{ clear:none !important; float : left; width : 12.5% !important; }
+.cell-even:first-child:nth-last-child(9),
+.cell-even:first-child:nth-last-child(9) ~ .cell-even
+{ clear:none !important; float : left; width : 11.11% !important; }
+.cell-even:first-child:nth-last-child(10),
+.cell-even:first-child:nth-last-child(10) ~ .cell-even
+{ clear:none !important; float : left; width : 10% !important; }
+
+/**/
