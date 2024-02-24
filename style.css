@@ -1,0 +1,325 @@
+body {
+    -webkit-text-size-adjust: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-size: 14px;
+	font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	line-height: 2;
+	font-weight: 400;
+	color: #333;
+    background-color: #333;
+}
+
+h2 {
+    font-size: 2rem !important;
+}
+
+.go-to-shop {
+    background-color: #2C2E43;
+    padding: 50px 0;
+}
+
+.go-to-shop h3 {
+    font-size: 30px !important;
+    color: white !important;
+}
+
+.btn-default {
+    background-color: white;
+    color: black;
+    border-radius: unset;
+}
+
+.about-us {
+    min-height: 300px;
+    background-color: #334257;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.about-us h2 {
+    color: white !important;
+}
+
+.about-us h6 {
+    color: white !important;
+}
+
+.about-us p {
+    padding-top: 1rem;
+    font-size: .9rem;
+    color: white;
+}
+
+.about-us .card,
+.benefits .card {
+    background-color: #313f52 !important;
+    transition: .5s;
+}
+
+.about-us .card:hover,
+.benefits .card:hover {
+    background-color: #2C2E43 !important;
+}
+
+.underlined::after {
+    background: #548CA8;
+    height: 1px;
+    display: block;
+    content: ' ';
+    width: 50px;
+    margin-top: .3rem;
+    position: relative;
+}
+
+.underlined.centered::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.products {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.products p {
+    font-size: .9rem;
+    color: #333;
+}
+
+.products a {
+    color: #548CA8;
+}
+
+.benefits {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #334257;
+}
+
+.benefits h2,
+.benefits h6 {
+    color: white !important;
+}
+
+.benefits p {
+    color: white !important;
+}
+
+.status {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #2C2E43;
+}
+
+.status h2 {
+    color: white !important;
+}
+
+.status p {
+    font-weight: 500;
+    font-size: .9rem;
+    color: black;
+}
+
+.status small {
+    font-weight: bold;
+}
+
+.rawrr{
+    margin-left: 190;
+    align-self: center;
+}
+
+.cardr{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.faq {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #334257;
+    display: none;
+}
+
+.faq h2 {
+    color: white !important;
+}
+
+.faq p {
+    color: black;
+    margin-bottom: 0;
+}
+
+.faq button {
+    border-radius: 0;
+}
+
+.faq button:hover,
+.faq button:active,
+.faq button:focus {
+    background-color: #ffc107 !important;
+}
+
+.faq .card {
+    background-color: #ffc107;
+    border: none;
+    border-radius: 0;
+}
+
+.faq .fa {
+    margin-top: 3px;
+}
+
+.footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #2C2E43;
+    color: white;
+}
+
+.btn[aria-expanded=true] .fa.fa-plus::before {
+    content: "\f068" !important;
+}
+
+.yt__acme_footer_top_content_mainmenu__list a,
+.yt__acme_footer_top_content_usefullink__list a,
+.yt__acme_footer_top_content_socialist_list a,
+.yt__acme_footer_top_content_goup a {
+    text-decoration: none;
+}
+
+.yt__acme_footer_top_content_mainmenu__list p,
+.yt__acme_footer_top_content_usefullink__list p {
+    margin-top: 0 !important;
+    margin-bottom: 0px !important;
+}
+
+h1,
+.heading-1 {
+	font-size: 30px;
+	line-height: 1.2;
+}
+
+#home h1,
+#home h5 {
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+	h1,
+	.heading-1 {
+		font-size: 56px;
+		line-height: 1;
+	}
+}
+
+@media (min-width: 1200px) {
+	h1,
+	.heading-1 {
+		font-size: 74px;
+	}
+
+    .swiper-slide-caption .container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .swiper-slide-caption .container {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1400px) {
+	h1,
+	.heading-1 {
+		font-size: 70px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+    .about-us h2,
+    .products h2,
+    .benefits h2,
+    .status h2,
+    .faq h2 {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .go-to-shop h3 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .go-to-shop button {
+        font-size: .7rem;
+        margin: auto;
+    }
+
+    .go-to-shop button.btn-block {
+        width: unset;
+    }
+}
+
+@media (min-width: 992px) {
+	body {
+		font-size: 13px;
+	}
+}
+
+.page {
+    display: none;
+}
+
+#ipsLayout_footer {
+    display: none;
+}
+
+.loaderClass {
+    border: 12px solid #dcd7d7;
+    border-top: 12px solid #009dff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: SpinLoader 2.5s linear infinite;
+ }
+
+.loaderClass img {
+    height: 96px;
+    width: 96px;
+    border-radius: 50%;
+    animation: LogoModify 2.5s linear infinite;
+ }
+ 
+ @keyframes SpinLoader {
+    0% {
+       transform: rotate(0deg);
+    }
+    100% {
+       transform: rotate(360deg);
+    }
+ }
+ @keyframes LogoModify {
+    0% {
+       transform: rotate(360deg);
+    }
+    100% {
+       transform: rotate(0deg);
+    }
+ }
+ 
+.woyy h4{
+    color: #dcd7d7;
+    margin-top: 400;
+}
+
